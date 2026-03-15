@@ -1,0 +1,9 @@
+@use 'lib' as *;
+
+.ui {
+	$self: &;
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}

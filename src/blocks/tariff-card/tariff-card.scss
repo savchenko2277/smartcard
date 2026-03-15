@@ -1,0 +1,118 @@
+@use 'lib' as *;
+
+.tariff-card {
+	$self: &;
+
+	background: #ffffff;
+	border-radius: fluid(56px, 28px);
+
+	&_alt {
+		#{$self}__value {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		#{$self}__icon {
+			img {
+				width: fluid(40px, 28px);
+				height: fluid(40px, 28px);
+			}
+		}
+	}
+
+	&__top {
+		padding: fluid(56px, 24px) fluid(56px, 16px) fluid(44px, 20px) fluid(56px, 16px);
+		border-bottom: 1px solid #3C3C432E;
+	}
+
+	&__value {
+		margin-bottom: 12px;
+		font-size: fluid(24px, 18px);
+		color: $pinkColor;
+		font-weight: 600;
+	}
+
+	&__desc {
+		margin-bottom: fluid(28px, 12px);
+		font-size: fluid(16px, 14px);
+		line-height: 150%;
+		color: #3C3C4399;
+	}
+
+	&__price {
+		font-weight: 600;
+		line-height: 110%;
+		font-size: fluid(44px, 22px);
+	}
+
+	&__content {
+		padding: fluid(44px, 20px) fluid(56px, 16px);
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	&__rows {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__list-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: fluid(12px, 8px);
+		font-size: fluid(16px, 14px);
+	}
+
+	&__list-icon {
+		width: 24px;
+		height: 24px;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		@include media("<=xs") {
+			img {
+				display: none;
+			}
+
+			width: 16px;
+			height: 16px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background: url("../img/icons/check.svg") no-repeat center / contain;
+			}
+		}
+	}
+
+	&__bottom {
+		padding: 0 fluid(56px, 16px) fluid(56px, 16px) fluid(56px, 16px);
+	}
+
+	&__btn {}
+
+	&__rows-title {
+		font-weight: 500;
+		font-size: fluid(16px, 15px);
+	}
+
+}

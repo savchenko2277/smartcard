@@ -1,0 +1,71 @@
+@use 'lib' as *;
+
+.offer-card {
+	$self: &;
+
+	padding: fluid(44px, 28px);
+	background: #ffffff;
+	border-radius: fluid(56px, 28px);
+	overflow: hidden;
+	min-height: fluid(400px, 200px);
+	position: relative;
+	display: flex;
+
+	&_desc {
+		min-height: fluid(400px, 275px);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
+		flex: 1;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: fluid(24px, 16px);
+		margin-bottom: fluid(16px, 12px);
+	}
+
+	&__desc {
+		font-size: fluid(16px, 14px);
+	}
+
+	&__link {
+
+		margin-top: auto;
+		font-size: 14px;
+		color: $pinkColor;
+		position: relative;
+		line-height: 150%;
+		width: fit-content;
+
+		@include media(">xs") {
+			display: none;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: $pinkColor;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		bottom: -15px;
+		right: -15px;
+		width: fluid(80%, 60%);
+
+		@include media("<=xs") {
+			bottom: 0; right: 0;
+		}
+	}
+
+}

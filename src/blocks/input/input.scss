@@ -1,0 +1,17 @@
+@use 'lib' as *;
+
+.input {
+	$self: &;
+
+	padding: fluid(21px, 15.5px) 16px;
+	border-radius: fluid(20px, 16px);
+	background: #F2F2F7;
+	color: $textColor;
+	caret-color: $pinkColor;
+	transition: all $transitionBase;
+	font-size: fluid(16px, 14px);
+
+	&.is-error {
+		box-shadow: inset 0 0 0 2px $red;
+	}
+}

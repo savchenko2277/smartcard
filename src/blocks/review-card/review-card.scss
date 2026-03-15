@@ -1,0 +1,53 @@
+@use 'lib' as *;
+
+.review-card {
+	$self: &;
+
+	background: #ffffff;
+	border-radius: fluid(56px, 28px);
+	padding: fluid(56px, 20px);
+
+	display: flex;
+	flex-direction: column;
+
+	&__card-title {
+		margin-bottom: fluid(32px, 12px);
+		font-size: fluid(24px, 18px);
+		font-weight: 500;
+	}
+
+	&__text {
+		color: rgba($color: #3C3C43, $alpha: 0.8);
+		line-height: 140%;
+		margin-bottom: fluid(30px, 10.5px);
+	}
+
+	&__author {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 12px;
+	}
+
+	&__author-image {
+		width: fluid(80px, 40px); height: fluid(80px, 40px);
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	&__author-info {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	&__author-name {
+		font-size: fluid(16px, 15px);
+		font-weight: 500;
+	}
+
+	&__author-date {
+		font-size: fluid(14px, 12px);
+	}
+
+}

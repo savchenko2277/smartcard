@@ -1,0 +1,36 @@
+$matches: (
+	xxxxlg: 1920,
+	xxxlg: 1680,
+	xxlg: 1440,
+	xlg: 1280,
+	lg: 1100,
+	md: 960,
+	sm: 780,
+	xs: 640,
+	xxs: 480,
+	xxxs: 360
+);
+
+// -- Colors -- //
+$pinkColor: #E40163;
+$darkColor: #221F28;
+$darkTealColor: #221F28;
+$lightTealColor: #EBFBFA;
+$pinkDisableColor: #EC91BC;
+$pinkAltColor: #FDE6F0;
+$bgColor: #F2F2F7;
+
+// -- Text -- //
+$textColor: #3C3C43;
+$textSize: 16px;
+
+// == Sizes == //
+$containerWidth: 1720px;
+$containerPadding: 14px;
+
+// == Transitions == //
+$transitionBase: 0.3s ease-in-out;
+$transitionFast: 0.1s ease-in-out;
+
+// == Systems == //
+$red: #FF3B30;

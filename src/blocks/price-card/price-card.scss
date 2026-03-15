@@ -1,0 +1,35 @@
+@use 'lib' as *;
+
+.price-card {
+	$self: &;
+
+	background: #ffffff;
+	border-radius: fluid(56px, 28px);
+	padding: fluid(56px, 28px);
+	height: fluid(431px, 331px);
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		margin-bottom: 20px;
+		font-weight: 500;
+		font-size: fluid(24px, 16px);
+		color: $pinkColor;
+	}
+
+	&__desc {
+		margin-bottom: 24px;
+		font-weight: 500;
+		font-size: fluid(16px, 15px);
+	}
+
+	&__price {
+		margin-top: auto;
+		font-weight: 600;
+		font-size: fluid(44px, 22px);
+		margin-bottom: fluid(32px, 24px);
+	}
+
+	&__btn {}
+
+}

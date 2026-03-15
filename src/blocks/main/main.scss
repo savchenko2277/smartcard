@@ -1,0 +1,12 @@
+@use 'lib' as *;
+
+.main {
+	$self: &;
+
+	&_ui {
+		padding-top: 120px;
+		display: flex;
+		flex-direction: column;
+		gap: 64px;
+	}
+}

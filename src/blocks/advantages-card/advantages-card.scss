@@ -1,0 +1,79 @@
+@use 'lib' as *;
+
+.advantages-card {
+	$self: &;
+
+	position: relative;
+	padding: 20px;
+	color: #ffffff;
+	background: rgba($color: #ffffff, $alpha: 0.04);
+	border-radius: fluid(24px, 20px);
+	display: flex;
+	flex-direction: column;
+
+	&_reverse {
+		#{$self}__icon {
+			right: auto;
+			left: -51px;
+		}
+
+		#{$self}__title {
+			padding-right: 0;
+		}
+	}
+
+	&__icon {
+		@include flex-center;
+
+		padding: 20px;
+		border-radius: 50%;
+		background: rgba($color: #ffffff, $alpha: 0.04);
+		flex: 0 0 auto;
+		position: absolute;
+		top: -32px;
+		right: -32px;
+
+		img {
+			width: 40px;
+			height: 40px;
+			fill: #ffffff;
+		}
+
+		@include media("<=md") {
+			padding: 0;
+			background: 0;
+			border-radius: 0;
+			position: static;
+			top: auto;
+			right: auto;
+			left: auto;
+			bottom: auto;
+			margin-bottom: 16px;
+			align-self: flex-start;
+
+			img {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: fluid(24px, 18px);
+		margin-bottom: fluid(16px, 12px);
+		display: block;
+		padding-right: 32px;
+
+		@include media("<=md") {
+			padding-right: 0;
+		}
+	}
+
+	&__text {
+		font-size: fluid(16px, 14px);
+		color: rgba($color: #ffffff, $alpha: 0.6);
+		line-height: 150%;
+	}
+
+}
