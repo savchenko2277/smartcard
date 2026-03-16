@@ -1,0 +1,68 @@
+@use 'lib' as *;
+
+.solutions {
+	$self: &;
+
+	background: $bgColor;
+	overflow: hidden;
+
+	&__container {}
+
+	&__top {
+		margin-bottom: fluid(100px, 32px);
+
+		@include media("<=md") {
+			text-align: center;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		@include media("<=md") {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__desc {
+		font-size: fluid(24px, 17px);
+		max-width: 580px;
+		justify-self: end;
+		line-height: 150%;
+
+		@include media("<=md") {
+			justify-self: center;
+		}
+	}
+
+	&__cards.swiper {
+		overflow: visible;
+
+		@include media(">sm") {
+			.swiper-wrapper {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: fluid(40px, 8px);
+
+				@include media("<=xlg") {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+		}
+
+		.swiper-wrapper {
+			@include media("<=sm") {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__card.swiper-slide {
+		width: auto;
+		height: auto;
+	}
+
+	&__pagination {
+		justify-self: center;
+	}
+
+}

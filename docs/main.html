@@ -4,22 +4,710 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css?v=1773604479404">
+    <link rel="stylesheet" href="css/style.css?v=1773700849278">
     <title></title>
 </head>
 <body id="home">
-<header class="header ">
-
+<header data-header-js class="header is-scroll">
+    <div class="header__container">
+        <a href="#" class="header__logo">
+            <img loading="lazy" src="./img/logo.svg" alt="">
+        </a>
+        <div class="header__menu">
+            <div class="header__menu-container">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item"><a href="#">Услуги</a></li>
+                        <li class="header__list-item"><a href="#">Частным лицам</a></li>
+                        <li class="header__list-item"><a href="#">Оплаты</a></li>
+                        <li class="header__list-item"><a href="#">Бизнес</a></li>
+                        <li class="header__list-item"><a href="#">Партнёрам</a></li>
+                        <li class="header__list-item"><a href="#">Каталог</a></li>
+                        <li class="header__list-item"><a href="#">Статьи</a></li>
+                        <li class="header__list-item"><a href="#">Контакты</a></li>
+                        <li class="header__list-item"><a href="#">О&#160;компании</a></li>
+                    </ul>
+                </nav>
+                <div class="header__side">
+                    <div class="header__contacts">
+                        <a href="#" class="header__tel">+7&#160;(90)&#160;00-00-00-00</a>
+                        <p class="header__time">с&#160;9:00&#160;до&#160;22:00</p>
+                    </div>
+                    <a href="#" class="header__btn btn btn-pink btn-pink_mini">Войти в&#160;ЛК</a>
+                </div>
+            </div>
+        </div>
+        <button class="header__burger">
+            <span></span>
+        </button>
+    </div>
 </header>
 
 <main class="main">
 
+    <section class="promo-cards">
+        <div class="promo-cards__container">
+            <div class="promo-cards__icon-mobile">
+                <img loading="lazy" src="./img/smartcard.webp" alt="">
+            </div>
+            <h1 class="promo-cards__title title">Смарт Кард. <br> Просто удобный <br> мобильный интернет.</h1>
+            <div class="promo-cards__info">
+                <h2 class="promo-cards__sub-title">
+                    Сим-карта для&#160;интернета от&#160;Смарт Кард
+                </h2>
+                <p class="promo-cards__desc">
+                    Сим-карта с&#160;высокоскоростным интернетом без&#160;ограничений. Стабильное соединение, где&#160;вам&#160;необходимо:
+                    дома, на&#160;даче, в&#160;авто.
+                </p>
+                <a href="#" class="promo-cards__btn btn btn-pink">
+                    Заказать сим-карту
+                </a>
+            </div>
+            <div class="promo-cards__advantages">
+                <div class="promo-cards__advantages-icon">
+                    <img loading="lazy" src="./img/smartcard.webp" alt="">
+                </div>
+                <div class="promo-cards__items">
+                    <div class="advantages-card promo-cards__item">
+                        <div class="advantages-card__icon">
+                            <img loading="lazy" src="./img/icons/global.svg" alt="">
+                        </div>
+                        <h7 class="advantages-card__title">Инфраструктура федеральных операторов</h7>
+                        <p class="advantages-card__text">
+                            Работаем на&#160;сетях крупнейших операторов связи&#160;&#8212; максимальное покрытие и&#160;предсказуемое
+                            качество
+                            интернета.
+                        </p>
+                    </div>
+
+                    <div class="advantages-card advantages-card_reverse">
+                        <div class="advantages-card__icon">
+                            <img loading="lazy" src="./img/icons/happy.svg" alt="">
+                        </div>
+                        <h7 class="advantages-card__title">Инфраструктура федеральных операторов</h7>
+                        <p class="advantages-card__text">
+                            Работаем на&#160;сетях крупнейших операторов связи&#160;&#8212; максимальное покрытие и&#160;предсказуемое
+                            качество
+                            интернета.
+                        </p>
+                    </div>
+
+                    <div class="advantages-card promo-cards__item">
+                        <div class="advantages-card__icon">
+                            <img loading="lazy" src="./img/icons/like.svg" alt="">
+                        </div>
+                        <h7 class="advantages-card__title">Инфраструктура федеральных операторов</h7>
+                        <p class="advantages-card__text">
+                            Работаем на&#160;сетях крупнейших операторов связи&#160;&#8212; максимальное покрытие и&#160;предсказуемое
+                            качество
+                            интернета.
+                        </p>
+                    </div>
+
+                    <div class="advantages-card advantages-card_reverse">
+                        <div class="advantages-card__icon">
+                            <img loading="lazy" src="./img/icons/screens.svg" alt="">
+                        </div>
+                        <h7 class="advantages-card__title">Инфраструктура федеральных операторов</h7>
+                        <p class="advantages-card__text">
+                            Работаем на&#160;сетях крупнейших операторов связи&#160;&#8212; максимальное покрытие и&#160;предсказуемое
+                            качество
+                            интернета.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-solutions-js class="solutions section-overlay section-padding">
+        <div class="solutions__container container">
+            <div class="solutions__top block-top">
+                <h2 class="solutions__title title">Готовые интернет-решения под&#160;ключ</h2>
+                <p class="solutions__desc">
+                    Мы&#160;разработали тарифы для&#160;разных нужд, включая индивидуальные предложения. Без&#160;скрытых условий
+                    и&#160;звёздочек. Выберите оптимальный пакет под&#160;ваши задачи или&#160;спросите нас&#160;и&#160;мы&#160;поможем.
+                </p>
+            </div>
+            <div class="solutions__cards swiper">
+                <div class="swiper-wrapper">
+                    <div class="tariff-card solutions__card swiper-slide">
+                        <div class="tariff-card__top">
+                            <p class="tariff-card__value">
+                                1000&#160;ГБ
+                            </p>
+                            <p class="tariff-card__desc">
+                                Максимум интернет возможностей
+                            </p>
+                            <p class="tariff-card__price">
+                                от&#160;1&#160;900&#160;₽ / мес
+                            </p>
+                        </div>
+                        <div class="tariff-card__content">
+                            <div class="tariff-card__rows">
+                                <ul class="tariff-card__list">
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tariff-card__bottom">
+                            <a href="#" class="tariff-card__btn btn btn-border">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="tariff-card solutions__card swiper-slide">
+                        <div class="tariff-card__top">
+                            <p class="tariff-card__value">
+                                1000&#160;ГБ
+                            </p>
+                            <p class="tariff-card__desc">
+                                Максимум интернет возможностей
+                            </p>
+                            <p class="tariff-card__price">
+                                от&#160;1&#160;900&#160;₽ / мес
+                            </p>
+                        </div>
+                        <div class="tariff-card__content">
+                            <div class="tariff-card__rows">
+                                <ul class="tariff-card__list">
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tariff-card__bottom">
+                            <a href="#" class="tariff-card__btn btn btn-border">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="tariff-card solutions__card swiper-slide">
+                        <div class="tariff-card__top">
+                            <p class="tariff-card__value">
+                                1000&#160;ГБ
+                            </p>
+                            <p class="tariff-card__desc">
+                                Максимум интернет возможностей
+                            </p>
+                            <p class="tariff-card__price">
+                                от&#160;1&#160;900&#160;₽ / мес
+                            </p>
+                        </div>
+                        <div class="tariff-card__content">
+                            <div class="tariff-card__rows">
+                                <ul class="tariff-card__list">
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tariff-card__bottom">
+                            <a href="#" class="tariff-card__btn btn btn-border">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="tariff-card solutions__card swiper-slide">
+                        <div class="tariff-card__top">
+                            <p class="tariff-card__value">
+                                1000&#160;ГБ
+                            </p>
+                            <p class="tariff-card__desc">
+                                Максимум интернет возможностей
+                            </p>
+                            <p class="tariff-card__price">
+                                от&#160;1&#160;900&#160;₽ / мес
+                            </p>
+                        </div>
+                        <div class="tariff-card__content">
+                            <div class="tariff-card__rows">
+                                <ul class="tariff-card__list">
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tariff-card__bottom">
+                            <a href="#" class="tariff-card__btn btn btn-border">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="tariff-card solutions__card swiper-slide">
+                        <div class="tariff-card__top">
+                            <p class="tariff-card__value">
+                                1000&#160;ГБ
+                            </p>
+                            <p class="tariff-card__desc">
+                                Максимум интернет возможностей
+                            </p>
+                            <p class="tariff-card__price">
+                                от&#160;1&#160;900&#160;₽ / мес
+                            </p>
+                        </div>
+                        <div class="tariff-card__content">
+                            <div class="tariff-card__rows">
+                                <ul class="tariff-card__list">
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                    <li class="tariff-card__list-item">
+                                        <div class="tariff-card__list-icon">
+                                            <img loading="lazy" src="./img/icons/smart-car.svg" alt="">
+                                        </div>
+                                        Действует в&#160;поездках по&#160;России
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tariff-card__bottom">
+                            <a href="#" class="tariff-card__btn btn btn-border">Заказать</a>
+                        </div>
+                    </div>
+                    <div class="cta-card solutions__card swiper-slide">
+                        <div class="cta-card__content">
+                            <h7 class="cta-card__title">
+                                Хотите больше или&#160;меньше интернета?
+                            </h7>
+                            <p class="cta-card__desc">
+                                Напишите нам&#160;и&#160;мы&#160;поможем выбрать лучшее решение для&#160;вас!
+                            </p>
+                            <a href="#" class="btn btn-pink">Написать нам</a>
+                        </div>
+                        <div class="cta-card__bg">
+                            <img loading="lazy" src="./img/cta-bg.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="solutions__pagination custom-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section-padding">
+        <div class="services__container container">
+            <h2 class="services__title title">Наши услуги</h2>
+            <div class="services__cards">
+                <a class="service-card services__card">
+                    <div class="service-card__content">
+                        <h7 class="service-card__title">
+                            Интернет для&#160;бизнеса
+                        </h7>
+                        <p class="service-card__desc">
+                            Корпоративные линии с&#160;фиксированной скоростью, VPN, APN и&#160;приоритезацией трафика для&#160;офисов
+                            и&#160;удалённых точек.
+                        </p>
+                        <div class="service-card__link">Перейти</div>
+                    </div>
+                    <div class="service-card__bg">
+                        <img loading="lazy" src="./img/services/1.webp" alt="">
+                    </div>
+                </a>
+                <a class="service-card services__card">
+                    <div class="service-card__content">
+                        <h7 class="service-card__title">
+                            Интернет в&#160;загородный дом&#160;и&#160;на&#160;дачу
+                        </h7>
+                        <p class="service-card__desc">
+                            Развёртывание LTE-роутеров с&#160;внешними антеннами для&#160;стабильного сигнала в&#160;удалённых районах.
+                        </p>
+                        <div class="service-card__link">Перейти</div>
+                    </div>
+                    <div class="service-card__bg">
+                        <img loading="lazy" src="./img/services/2.webp" alt="">
+                    </div>
+                </a>
+                <a class="service-card services__card">
+                    <div class="service-card__content">
+                        <h7 class="service-card__title">
+                            Интернет в&#160;автомобиль
+                        </h7>
+                        <p class="service-card__desc">
+                            Русификация медиасистем, мобильный роутер с&#160;антенной для&#160;интернета в&#160;пути, поддержка
+                            навигаторов и&#160;камер.
+                        </p>
+                        <div class="service-card__link">Перейти</div>
+                    </div>
+                    <div class="service-card__bg">
+                        <img loading="lazy" src="./img/services/3.webp" alt="">
+                    </div>
+                </a>
+                <a class="service-card services__card services__card_big">
+                    <div class="service-card__content">
+                        <h7 class="service-card__title">
+                            Видеонаблюдение
+                        </h7>
+                        <p class="service-card__desc">
+                            Подберём тариф для&#160;редкого использования: мессенджеры, карты и&#160;интернет-вещибез&#160;лишних трат.
+                        </p>
+                        <div class="service-card__link">Перейти</div>
+                    </div>
+                    <div class="service-card__bg">
+                        <img loading="lazy" src="./img/services/5.webp" alt="">
+                        <img loading="lazy" src="./img/services/5-big.webp" alt="">
+                    </div>
+                </a>
+                <a class="service-card services__card">
+                    <div class="service-card__content">
+                        <h7 class="service-card__title">
+                            Видеонаблюдение
+                        </h7>
+                        <p class="service-card__desc">
+                            Подберём тариф для&#160;редкого использования: мессенджеры, карты и&#160;интернет-вещибез&#160;лишних трат.
+                        </p>
+                        <div class="service-card__link">Перейти</div>
+                    </div>
+                    <div class="service-card__bg">
+                        <img loading="lazy" src="./img/services/4.webp" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section data-reviews-js class="reviews section-padding">
+        <div class="reviews__container container">
+            <h2 class="reviews__title title">Вот&#160;что&#160;говорят о&#160;Смарт Кард наши клиенты</h2>
+            <div class="reviews__nav custom-navigation">
+                <button class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+            <div class="reviews__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="review-card reviews__card swiper-slide">
+                        <h7 class="review-card__card-title">
+                            По&#160;цене приемлемо, интернет без&#160;ограничений трафика. За&#160;сезон 2000&#160;км проехал&#160;&#8212; ни&#160;разу
+                            не&#160;подвела
+                            связь.
+                        </h7>
+                        <p class="review-card__text">
+                            Я&#160;езжу на&#160;рыбалку в&#160;Карелию, поэтому нужен интернет в&#160;авто для&#160;GPS, погоды и&#160;музыки
+                            в&#160;колонках. Обычные
+                            тарифы кончались на&#160;полпути. Взял у&#160;Smart Card комплект с&#160;симкой для&#160;интернета&#160;&#8212; антенна
+                            магнитная,
+                            роутер компактный. На&#160;трассе 65&#160;Мбит, в&#160;лесу 30&#160;Мбит держит уверенно. Сим-карту активировали
+                            онлайн.
+                            Советую.
+                        </p>
+                        <div class="review-card__author">
+                            <img loading="lazy" src="./img/author-image.webp" alt="" class="review-card__author-image">
+                            <div class="review-card__author-info">
+                                <p class="review-card__author-name">Михаил</p>
+                                <p class="review-card__author-date">12.10.2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card reviews__card swiper-slide">
+                        <h7 class="review-card__card-title">
+                            По&#160;цене приемлемо, интернет без&#160;ограничений трафика. За&#160;сезон 2000&#160;км проехал&#160;&#8212; ни&#160;разу
+                            не&#160;подвела
+                            связь.
+                        </h7>
+                        <p class="review-card__text">
+                            Я&#160;езжу на&#160;рыбалку в&#160;Карелию, поэтому нужен интернет в&#160;авто для&#160;GPS, погоды и&#160;музыки
+                            в&#160;колонках. Обычные
+                            тарифы кончались на&#160;полпути. Взял у&#160;Smart Card комплект с&#160;симкой для&#160;интернета&#160;&#8212; антенна
+                            магнитная,
+                            роутер компактный. На&#160;трассе 65&#160;Мбит, в&#160;лесу 30&#160;Мбит держит уверенно. Сим-карту активировали
+                            онлайн.
+                            Советую.
+                        </p>
+                        <div class="review-card__author">
+                            <img loading="lazy" src="./img/author-image.webp" alt="" class="review-card__author-image">
+                            <div class="review-card__author-info">
+                                <p class="review-card__author-name">Михаил</p>
+                                <p class="review-card__author-date">12.10.2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card reviews__card swiper-slide">
+                        <h7 class="review-card__card-title">
+                            По&#160;цене приемлемо, интернет без&#160;ограничений трафика. За&#160;сезон 2000&#160;км проехал&#160;&#8212; ни&#160;разу
+                            не&#160;подвела
+                            связь.
+                        </h7>
+                        <p class="review-card__text">
+                            Я&#160;езжу на&#160;рыбалку в&#160;Карелию, поэтому нужен интернет в&#160;авто для&#160;GPS, погоды и&#160;музыки
+                            в&#160;колонках. Обычные
+                            тарифы кончались на&#160;полпути. Взял у&#160;Smart Card комплект с&#160;симкой для&#160;интернета&#160;&#8212; антенна
+                            магнитная,
+                            роутер компактный. На&#160;трассе 65&#160;Мбит, в&#160;лесу 30&#160;Мбит держит уверенно. Сим-карту активировали
+                            онлайн.
+                            Советую.
+                        </p>
+                        <div class="review-card__author">
+                            <img loading="lazy" src="./img/author-image.webp" alt="" class="review-card__author-image">
+                            <div class="review-card__author-info">
+                                <p class="review-card__author-name">Михаил</p>
+                                <p class="review-card__author-date">12.10.2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card reviews__card swiper-slide">
+                        <h7 class="review-card__card-title">
+                            По&#160;цене приемлемо, интернет без&#160;ограничений трафика. За&#160;сезон 2000&#160;км проехал&#160;&#8212; ни&#160;разу
+                            не&#160;подвела
+                            связь.
+                        </h7>
+                        <p class="review-card__text">
+                            Я&#160;езжу на&#160;рыбалку в&#160;Карелию, поэтому нужен интернет в&#160;авто для&#160;GPS, погоды и&#160;музыки
+                            в&#160;колонках. Обычные
+                            тарифы кончались на&#160;полпути. Взял у&#160;Smart Card комплект с&#160;симкой для&#160;интернета&#160;&#8212; антенна
+                            магнитная,
+                            роутер компактный. На&#160;трассе 65&#160;Мбит, в&#160;лесу 30&#160;Мбит держит уверенно. Сим-карту активировали
+                            онлайн.
+                            Советую.
+                        </p>
+                        <div class="review-card__author">
+                            <img loading="lazy" src="./img/author-image.webp" alt="" class="review-card__author-image">
+                            <div class="review-card__author-info">
+                                <p class="review-card__author-name">Михаил</p>
+                                <p class="review-card__author-date">12.10.2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card reviews__card swiper-slide">
+                        <h7 class="review-card__card-title">
+                            По&#160;цене приемлемо, интернет без&#160;ограничений трафика. За&#160;сезон 2000&#160;км проехал&#160;&#8212; ни&#160;разу
+                            не&#160;подвела
+                            связь.
+                        </h7>
+                        <p class="review-card__text">
+                            Я&#160;езжу на&#160;рыбалку в&#160;Карелию, поэтому нужен интернет в&#160;авто для&#160;GPS, погоды и&#160;музыки
+                            в&#160;колонках. Обычные
+                            тарифы кончались на&#160;полпути. Взял у&#160;Smart Card комплект с&#160;симкой для&#160;интернета&#160;&#8212; антенна
+                            магнитная,
+                            роутер компактный. На&#160;трассе 65&#160;Мбит, в&#160;лесу 30&#160;Мбит держит уверенно. Сим-карту активировали
+                            онлайн.
+                            Советую.
+                        </p>
+                        <div class="review-card__author">
+                            <img loading="lazy" src="./img/author-image.webp" alt="" class="review-card__author-image">
+                            <div class="review-card__author-info">
+                                <p class="review-card__author-name">Михаил</p>
+                                <p class="review-card__author-date">12.10.2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="footer">
-
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer__column">
+                <a href="#" class="footer__logo">
+                    <img loading="lazy" src="./img/logo-light.svg" alt="">
+                </a>
+            </div>
+            <div class="footer__column">
+                <p class="footer__desc">
+                    Просто удобный мобильный интернет.
+                </p>
+            </div>
+            <div class="footer__column">
+                <div class="footer__contacts">
+                    <div class="footer__contact">
+                        <h5 class="footer__contact-title">Наша почта:</h5>
+                        <a href="#" class="footer__contact-text">example@gmail.com</a>
+                    </div>
+                    <div class="footer__contact">
+                        <h5 class="footer__contact-title">Звонок/Whatsapp</h5>
+                        <a href="#" class="footer__contact-text">+7 000 00 00</a>
+                    </div>
+                    <div class="footer__contact">
+                        <h5 class="footer__contact-title">Где&#160;мы&#160;находимся:</h5>
+                        <a href="#" class="footer__contact-text">г.&#160;Санкт-Петербург,&#160;наб.&#160;Обводного
+                            канала,&#160;д.&#160;199&#8211;201,&#160;лит.&#160;Ж,&#160;пом. 12-Н</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__column">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#">Каталог</a></li>
+                        <li class="footer__list-item"><a href="#">Услуги</a></li>
+                        <li class="footer__list-item"><a href="#">Статьи</a></li>
+                        <li class="footer__list-item"><a href="#">Частным лицам</a></li>
+                        <li class="footer__list-item"><a href="#">Контакты</a></li>
+                        <li class="footer__list-item"><a href="#">Бизнес</a></li>
+                        <li class="footer__list-item"><a href="#">О&#160;компании</a></li>
+                        <li class="footer__list-item"><a href="#">Партнёрам</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <a href="#" class="footer__bottom-link">Условия оказания услуг</a>
+            <a href="#" class="footer__bottom-link">Политика обработки Персональных данных</a>
+            <a href="#" class="footer__bottom-link">Согласние на&#160;обработку Персновальных данных</a>
+            <a href="#" class="footer__bottom-link">Согласие на&#160;обработку Персональных данных KYC</a>
+        </div>
+    </div>
 </footer>
 
-<script src="js/common.js?v=1773604479404"></script>
+<script src="js/common.js?v=1773700849278"></script>
 </body>
+
 </html>

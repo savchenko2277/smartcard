@@ -1,0 +1,155 @@
+@use 'lib' as *;
+
+.promo-cards {
+	$self: &;
+
+	background: $darkTealColor;
+	padding-top: fluid(174px, 95px);
+	color: #ffffff;
+	padding-bottom: fluid(224px, 76px);
+	overflow: hidden;
+
+	&__icon-mobile {
+		display: block;
+		width: 272px;
+		align-self: center;
+		justify-self: center;
+		margin-bottom: 32px;
+		position: relative;
+		z-index: 1;
+
+		&::before {
+			content: '';
+			width: 300px;
+			height: 300px;
+			background: rgba($color: #E40163, $alpha: 0.6);
+			filter: blur(180px);
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+
+		@include media(">md") {
+			display: none;
+		}
+	}
+
+	&__container {
+		width: min(1680px, calc(100% - $containerPadding * 2));
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-between;
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: fluid(82px, 34px);
+		max-width: 860px;
+		position: relative;
+		z-index: 1;
+		line-height: 130%;
+
+		@include media("<=md") {
+			margin-bottom: 44px;
+			text-align: center;
+		}
+	}
+
+	&__info {
+		max-width: 613px;
+		display: flex;
+		flex-direction: column;
+
+		@include media("<=md") {
+			align-items: center;
+			text-align: center;
+			max-width: 100%;
+		}
+	}
+
+	&__sub-title {
+		font-weight: 700;
+		font-size: fluid(48px, 24px);
+		margin-bottom: fluid(24px, 12px);
+	}
+
+	&__desc {
+		font-size: fluid(16px, 14px);
+		line-height: 150%;
+		max-width: 377px;
+		margin-bottom: fluid(44px, 24px);
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 386px;
+	}
+
+	&__advantages {
+		margin-top: 168px;
+		grid-column: auto / span 2;
+		position: relative;
+		z-index: 1;
+
+		@include media("<=md") {
+			grid-column: auto;
+			grid-row: 3 / auto;
+			margin-top: 0;
+			margin-bottom: 44px;
+		}
+	}
+
+	&__advantages-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: fluid(626px, 60px);
+		object-fit: contain;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #E40163, $alpha: 0.6);
+			filter: blur(300px);
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+
+		@include media("<=md") {
+			display: none;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 436px));
+		justify-content: space-between;
+		gap: fluid(154px, 64px);
+		position: relative;
+		z-index: 1;
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+			gap: 16px;
+		}
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+}

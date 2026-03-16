@@ -1,0 +1,34 @@
+@use 'lib' as *;
+
+.custom-navigation {
+	$self: &;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: fluid(24px, 20px);
+
+	&__btn {
+
+		border-radius: 50%;
+		width: fluid(44px, 32px);
+		height: fluid(44px, 32px);
+
+		&_prev {
+			background: url(../img/icons/icon-left.svg) no-repeat center / contain;
+
+			@include media("<=xs") {
+				background: url(../img/icons/icon-left-light.svg) no-repeat center / contain;
+			}
+		}
+
+		&_next {
+			background: url(../img/icons/icon-right.svg) no-repeat center / contain;
+
+			@include media("<=xs") {
+				background: url(../img/icons/icon-right-light.svg) no-repeat center / contain;
+			}
+		}
+	}
+
+}

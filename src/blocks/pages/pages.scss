@@ -3,7 +3,8 @@
 .pages {
 	$self: &;
 
-	padding-top: 160px;
+	padding-top: fluid(160px, 100px);
+	padding-bottom: 40px;
 
 	&__container {
 

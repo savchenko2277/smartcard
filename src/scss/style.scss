@@ -14,6 +14,7 @@
 );
 
 @use "../blocks/**/*.scss";
+@import '../../node_modules/swiper/swiper-bundle.min.css';
 
 // Подключение шрифтов
 
@@ -32,6 +33,11 @@ body, html {
 	display: flex;
 	flex-flow: column nowrap;
 	min-height: 100vh;
+
+	&.no-scroll {
+		overflow: hidden;
+		padding-right: var(--sw);
+	}
 }
 
 .footer {

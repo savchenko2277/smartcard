@@ -68,5 +68,8 @@
 		"omit": "@@,js-,active,opened,moved,svg,sprite,icon-box,swiper,mb,is-,btn-,ui-",
 		"prefix": "@use 'lib' as *;",
 		"suffix": "$self: &;"
+	},
+	"dependencies": {
+		"swiper": "^12.1.2"
 	}
 }

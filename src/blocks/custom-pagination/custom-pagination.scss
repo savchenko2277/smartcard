@@ -1,0 +1,22 @@
+@use 'lib' as *;
+
+.custom-pagination {
+	$self: &;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 4px;
+
+	.swiper-pagination-bullet {
+		background: #0000000D;
+		height: 4px;
+		width: 12px;
+		transition: all $transitionBase;
+
+		&.swiper-pagination-bullet-active {
+			width: 44px;
+			background: #3C3C43;
+		}
+	}
+}

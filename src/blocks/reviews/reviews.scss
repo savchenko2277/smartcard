@@ -1,0 +1,53 @@
+@use 'lib' as *;
+
+.reviews {
+	$self: &;
+
+	overflow: hidden;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+			justify-content: center;
+		}
+	}
+
+	&__swiper.swiper {
+		overflow: visible;
+		grid-column: auto / span 2;
+		margin-top: fluid(78px, 36px);
+		max-width: 100%;
+
+		@include media("<=xs") {
+			grid-column: auto;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		max-width: 821px;
+
+		@include media("<=xs") {
+			text-align: center;
+		}
+	}
+
+	&__nav {
+		justify-self: end;
+
+		@include media("<=xs") {
+			justify-self: auto;
+			justify-content: center;
+			order: 2;
+		}
+	}
+
+	&__card.review-card {
+		display: flex;
+	}
+
+}

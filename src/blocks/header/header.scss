@@ -3,4 +3,267 @@
 .header {
 	$self: &;
 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 8px;
+	z-index: 10;
+
+	&.is-active {
+		#{$self}__container {
+			box-shadow: none;
+		}
+
+		#{$self}__menu {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+		}
+
+		#{$self}__burger {
+			span {
+				opacity: 0;
+			}
+
+			&::before {
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			}
+
+			&::after {
+				bottom: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(50%) rotate(-45deg);
+			}
+		}
+		#{$self}__container {
+			&::after {
+				opacity: 0.9;
+			}
+		}
+	}
+
+	&.is-scroll {
+		#{$self}__container {
+			box-shadow: 0px 4px 12px 0px #00000026;
+		}
+	}
+
+	&__container {
+		width: min(1840px, calc(100% - 8px * 2));
+		margin: 0 auto;
+		border-radius: 20px;
+		background: #ffffff;
+		padding: 12px 20px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		transition: box-shadow $transitionBase;
+		gap: 32px;
+
+		@include media("<=lg") {
+			padding: 12px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: #ffffff;
+				z-index: 1;
+				opacity: 0;
+				transition: opacity $transitionBase;
+			}
+		}
+	}
+
+	&__logo {
+		height: 32px;
+		object-fit: contain;
+		flex: 0 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__menu {
+		max-width: 1392px;
+		width: 100%;
+
+		@include media("<=lg") {
+			position: fixed;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background: #FFFFFF;
+
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all $transitionBase;
+			overflow-y: auto;
+		}
+	}
+
+	&__menu-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 32px;
+
+		@include media("<=lg") {
+			width: min($containerWidth, calc(100% - 20px * 2));
+			margin: 0 auto;
+			padding-top: 80px;
+			flex-direction: column-reverse;
+			align-items: start;
+			gap: 30px;
+			padding-bottom: 32px;
+		}
+	}
+
+	&__nav {
+		flex: 1 1 auto;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		max-width: 962px;
+
+		@include media("<=lg") {
+			flex-direction: column;
+			align-items: start;
+			gap: 32px;
+		}
+	}
+
+	&__list-item {
+		transition: all $transitionBase;
+		font-size: fluid(16px, 14px);
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		&.is-current {
+			color: $pinkColor;
+		}
+
+		@include media("<=lg") {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
+
+	&__side {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+
+		@include media("<=lg") {
+			flex-direction: column;
+			align-items: start;
+			gap: 16px;
+			width: 100%;
+			padding-bottom: 30px;
+			border-bottom: 1px solid #0000000D;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		align-items: end;
+
+		@include media("<=xxlg") {
+			display: none;
+		}
+
+		@include media("<=lg") {
+			display: flex;
+			align-items: start;
+		}
+	}
+
+	&__tel {
+		font-size: 17px;
+		font-weight: 700;
+
+		@include media("<=lg") {
+			font-size: 22px;
+		}
+	}
+
+	&__time {
+		font-size: 14px;
+		color: #3C3C4399;
+	}
+
+	&__btn.btn-pink_mini.btn {
+		@include media("<=lg") {
+			width: 100%;
+			max-width: 335px;
+			padding: 14.5px;
+			font-size: 15px;
+		}
+
+		@include media("<=xs") {
+			max-width: 100%;
+		}
+	}
+
+	&__burger {
+
+		@include flex-center;
+
+		height: 14px;
+		width: 18px;
+		position: relative;
+		z-index: 2;
+
+		span {
+			width: 100%;
+			height: 2px;
+			background: #3C3C43;
+			border-radius: 2px;
+			transition: all $transitionBase;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: #3C3C43;
+			border-radius: 2px;
+			top: 0;
+			left: 0;
+			transition: all $transitionBase;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: #3C3C43;
+			border-radius: 2px;
+			bottom: 0;
+			left: 0;
+			transition: all $transitionBase;
+		}
+
+		@include media(">lg") {
+			display: none
+		}
+	}
+
 }

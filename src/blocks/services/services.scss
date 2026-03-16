@@ -1,0 +1,39 @@
+@use 'lib' as *;
+
+.services {
+	$self: &;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: fluid(100px, 36px);
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(40px, 12px);
+		width: 100%;
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__card.service-card {
+		height: auto;
+		min-height: fluid(458px, 320px);
+	}
+
+	&__card_big {
+		@include media(">md") {
+			grid-column: 2 / span 1;
+			grid-row: 1 / span 2;
+		}
+	}
+
+}
