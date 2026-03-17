@@ -7,7 +7,9 @@ import { throttle } from "../../js/libs/utils.js";
     let swiper;
 
     const setSwiper = () => {
-        if (window.matchMedia("(max-width: 780px)").matches) {
+        const isMobile = window.matchMedia("(max-width: 780px)").matches;
+
+        if (isMobile && !swiper) {
             swiper = new Swiper(".solutions__cards.swiper", {
                 modules: [Pagination],
                 slidesPerView: 1.2,
@@ -19,20 +21,16 @@ import { throttle } from "../../js/libs/utils.js";
                     clickable: true,
                 },
             });
-        } else {
-            if (swiper) {
-                swiper.destroy();
-            }
         }
-    }
 
-
-    window.addEventListener("resize", () => {
-        window.addEventListener("resize", throttle(() => {
-            setSwiper();
-        }, 200));
-    });
+        if (!isMobile && swiper) {
+            swiper.destroy(true, true);
+            swiper = null;
+        }
+    };
 
     setSwiper();
+
+    window.addEventListener("resize", throttle(setSwiper, 200));
 
 })();

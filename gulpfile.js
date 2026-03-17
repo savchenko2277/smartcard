@@ -264,6 +264,11 @@ function watch() {
 	if (isSync) {
 		$.browserSync.init({
 			server: { baseDir: pth.pbl.root },
+			host: "0.0.0.0",
+			port: 3000,
+			open: false,
+			notify: false,
+			ui: false,
 		});
 	}
 	gulp.watch(pth.wtch.js, js);
