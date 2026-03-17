@@ -27,6 +27,10 @@
 	&__card.service-card {
 		height: auto;
 		min-height: fluid(458px, 320px);
+
+		@include media("<=xxxlg") {
+			min-height: 320px;
+		}
 	}
 
 	&__card_big {

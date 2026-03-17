@@ -46,7 +46,7 @@
 		line-height: 110%;
 		font-size: fluid(44px, 22px);
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			font-size: fluid(32px, 22px);
 		}
 	}

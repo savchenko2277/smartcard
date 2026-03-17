@@ -16,7 +16,7 @@
 			right: auto;
 			left: -51px;
 
-			@include media("<=xxlg") {
+			@include media("<=xxxlg") {
 				left: -24px;
 			}
 		}
@@ -43,7 +43,7 @@
 			fill: #ffffff;
 		}
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			img {
 				width: 24px;
 				height: 24px;
@@ -79,7 +79,7 @@
 		display: block;
 		padding-right: 32px;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			font-size: 18px;
 		}
 
@@ -93,7 +93,7 @@
 		color: rgba($color: #ffffff, $alpha: 0.6);
 		line-height: 150%;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			font-size: 14px;
 		}
 	}

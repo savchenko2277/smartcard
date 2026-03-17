@@ -9,7 +9,7 @@
 	padding-bottom: fluid(224px, 76px);
 	overflow: clip;
 
-	@include media("<=xxlg") {
+	@include media("<=xxxlg") {
 		padding-top: fluid(120px, 95px);
 	}
 
@@ -61,7 +61,7 @@
 		z-index: 1;
 		line-height: 130%;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			font-size: fluid(48px, 34px);
 		}
 
@@ -76,7 +76,7 @@
 		display: flex;
 		flex-direction: column;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			max-width: 460px;
 		}
 
@@ -92,7 +92,7 @@
 		font-size: fluid(48px, 24px);
 		margin-bottom: fluid(24px, 12px);
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			font-size: fluid(32px, 24px);
 		}
 	}
@@ -103,7 +103,7 @@
 		max-width: 377px;
 		margin-bottom: fluid(44px, 24px);
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			font-size: 14px;
 			margin-bottom: 24px;
 		}
@@ -113,7 +113,7 @@
 		width: 100%;
 		max-width: 386px;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			padding: 14.5px;
 			max-width: 320px;
 		}
@@ -125,7 +125,7 @@
 		position: relative;
 		z-index: 1;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			margin-top: 90px;
 		}
 
@@ -142,15 +142,15 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: fluid(626px, 60px);
+		width: 40%;
 		object-fit: contain;
 
 		&::before {
 			content: '';
-			width: 100%;
-			height: 100%;
+			width: 120%;
+			height: 120%;
 			background: rgba($color: #E40163, $alpha: 0.6);
-			filter: blur(300px);
+			filter: blur(320px);
 			border-radius: 50%;
 			position: absolute;
 			top: 50%;
@@ -159,8 +159,8 @@
 			z-index: -1;
 		}
 
-		@include media("<=xxlg") {
-			width: 320px;
+		@include media("<=xxxlg") {
+			width: 40%;
 
 			&::before {
 				width: 150%; height: 150%;
@@ -181,7 +181,7 @@
 		position: relative;
 		z-index: 1;
 
-		@include media("<=xxlg") {
+		@include media("<=xxxlg") {
 			gap: 64px;
 			grid-template-columns: repeat(2, minmax(auto, 360px));
 		}
