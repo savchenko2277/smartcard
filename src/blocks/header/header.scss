@@ -77,6 +77,10 @@
 				transition: opacity $transitionBase;
 			}
 		}
+
+		@include media("<=xs") {
+			width: min(1840px, calc(100% - 8px * 2));
+		}
 	}
 
 	&__logo {
