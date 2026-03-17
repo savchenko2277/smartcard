@@ -7,7 +7,7 @@
 	height: fluid(769px, 414px);
 	background: #ffffff;
 	border-radius: fluid(56px, 28px);
-	overflow: hidden;
+	overflow: clip;
 
 	&:hover {
 		#{$self}__bg {

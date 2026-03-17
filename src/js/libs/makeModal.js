@@ -76,7 +76,7 @@ makeModal({
 * @типичные стили для thumbnails:
 * 
 &__thumbs {
-	overflow: hidden;
+	overflow: clip;
 
 	&-wrapper {
 		will-change: transform;

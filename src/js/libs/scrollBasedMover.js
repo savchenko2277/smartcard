@@ -24,7 +24,7 @@
 * &__item {
 * 	height: 1px;
 * 	width: 100%;
-* 	overflow: hidden;
+* 	overflow: clip;
 * 	position: absolute;
 * 	bottom: 0;
 * 	will-change: scroll-position;

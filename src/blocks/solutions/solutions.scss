@@ -4,7 +4,7 @@
 	$self: &;
 
 	background: $bgColor;
-	overflow: hidden;
+	overflow: clip;
 
 	&__container {}
 
@@ -28,6 +28,10 @@
 		max-width: 580px;
 		justify-self: end;
 		line-height: 150%;
+
+		@include media("<=xxlg") {
+			font-size: 17px;
+		}
 
 		@include media("<=md") {
 			justify-self: center;

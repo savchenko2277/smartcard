@@ -31,7 +31,7 @@ preloadingBar({
 	justify-content: center;
 	pointer-events: none;
 	user-select: none;
-	overflow: hidden;
+	overflow: clip;
 	position: fixed;
 	z-index: 9999;
 	top: 0;

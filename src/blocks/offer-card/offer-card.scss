@@ -6,7 +6,7 @@
 	padding: fluid(44px, 28px);
 	background: #ffffff;
 	border-radius: fluid(56px, 28px);
-	overflow: hidden;
+	overflow: clip;
 	min-height: fluid(400px, 200px);
 	position: relative;
 	display: flex;

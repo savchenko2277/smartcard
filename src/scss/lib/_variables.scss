@@ -11,6 +11,22 @@ $matches: (
 	xxxs: 360
 );
 
+:root {
+	--container-padding: 120px;
+
+	@media (max-width: 1680px) {
+		--container-padding: 80px;
+	}
+
+	@media (max-width: 1440px) {
+		--container-padding: 40px;
+	}
+
+	@media (max-width: 640px) {
+		--container-padding: 16px;
+	}
+}
+
 // -- Colors -- //
 $pinkColor: #E40163;
 $darkColor: #221F28;
@@ -26,7 +42,8 @@ $textSize: 16px;
 
 // == Sizes == //
 $containerWidth: 1720px;
-$containerPadding: 14px;
+
+
 
 // == Transitions == //
 $transitionBase: 0.3s ease-in-out;

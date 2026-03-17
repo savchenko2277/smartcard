@@ -31,12 +31,12 @@ makeMasonry(document.querySelector('.masonry', {
 * @стили (необходимый минимум)
 *	.masonry {
 		position: relative;
-		overflow: hidden;
+		overflow: clip;
 		column-count: 5;
 		column-gap: 10px;
 	}
 	.masonry__item {
-		overflow: hidden;
+		overflow: clip;
 
 		img {
 			display: block;

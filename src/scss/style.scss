@@ -34,7 +34,7 @@ body, html {
 	min-height: 100vh;
 
 	&.no-scroll {
-		overflow: hidden;
+		overflow: clip;
 		padding-right: var(--sw);
 	}
 }

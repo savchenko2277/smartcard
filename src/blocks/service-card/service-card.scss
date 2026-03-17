@@ -6,7 +6,7 @@
 	position: relative;
 	background: #FFFFFF;
 	border-radius: fluid(56px, 28px);
-	overflow: hidden;
+	overflow: clip;
 	height: fluid(458px, 320px);
 	transition: box-shadow $transitionBase;
 

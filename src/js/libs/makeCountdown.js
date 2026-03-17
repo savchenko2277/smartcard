@@ -29,7 +29,7 @@
 
 	&__digit {
 		position: relative;
-		overflow: hidden;
+		overflow: clip;
 		height: 100%;
 
 		&::before, &::after {

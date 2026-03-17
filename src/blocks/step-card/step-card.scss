@@ -4,7 +4,7 @@
 	$self: &;
 
 	border-radius: fluid(56px, 28px);
-	overflow: hidden;
+	overflow: clip;
 	background: #ffffff;
 	position: relative;
 	height: 600px;

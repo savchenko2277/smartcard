@@ -6,13 +6,16 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 	gap: 4px;
 
 	.swiper-pagination-bullet {
 		background: #0000000D;
+		opacity: 1;
 		height: 4px;
 		width: 12px;
 		transition: all $transitionBase;
+		border-radius: 8px;
 
 		&.swiper-pagination-bullet-active {
 			width: 44px;

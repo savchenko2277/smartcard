@@ -39,7 +39,7 @@
 // спрятать элемент
 @mixin hide {
 	appearance: none;
-	overflow: hidden;
+	overflow: clip;
 	border: none;
 	margin: 0;
 	padding: 0;
