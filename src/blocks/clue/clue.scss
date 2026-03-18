@@ -5,17 +5,17 @@
 	position: relative;
 	width: 20px;
 	height: 20px;
+	max-width: 20px;
+	max-height: 20px;
 
 	&.active {
 		#{$self}__content {
-			opacity: 1;
-			visibility: visible;
+			display: block;
 		}
 		#{$self}__button {
 			&::after {
 				@include media("<=xs") {
-					opacity: 1;
-					visibility: visible;
+					display: block;
 				}
 			}
 		}
@@ -28,7 +28,7 @@
 	&__button {
 		width: 20px;
 		height: 20px;
-		background: url('../img/icons/question.svg') no-repeat center / contain;
+		background: url('../img/icons/question.svg') no-repeat center / cover;
 		position: relative;
 
 		&::after {
@@ -40,8 +40,7 @@
 			top: 12px;
 			left: 50%;
 			transform: translateX(-50%);
-			opacity: 0;
-			visibility: hidden;
+			display: none;
 		}
 	}
 
@@ -56,8 +55,7 @@
 		top: 36px;
 		width: 351px;
 		line-height: 150%;
-		opacity: 0;
-		visibility: hidden;
+		display: none;
 
 		&::after {
 			content: '';
