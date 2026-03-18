@@ -1,0 +1,91 @@
+@use 'lib' as *;
+
+.answers {
+	$self: &;
+
+	&__container {
+		width: min(1530px, calc(100% - var(--container-padding) * 2));
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+
+		@include media("<=xs") {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: fluid(80px, 32px);
+		align-self: center;
+	}
+
+	&__items-container {
+		width: 100%;
+		background: #ffffff;
+		border-radius: fluid(56px, 32px);
+	}
+
+	&__items {
+		width: min(1220px, calc(100% - var(--container-padding) * 2));
+		margin: 0 auto;
+		padding: fluid(80px, 28px) 0;
+		display: flex;
+		flex-direction: column;
+		gap: fluid(24px, 12px);
+	}
+
+	&__item {
+		display: grid;
+		grid-template-rows: max-content 0fr;
+		transition: all $transitionBase;
+
+		&.active {
+			grid-template-rows: max-content 1fr;
+
+			#{$self}__item-title {
+				padding-bottom: fluid(14px, 12px);
+			}
+
+			#{$self}__item-btn {
+				transform: rotate(180deg);
+			}
+
+			@include media("<=xs") {
+				padding-bottom: 16px;
+			}
+		}
+	}	
+
+	&__item-title {
+		padding-bottom: fluid(26px, 16px);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		font-size: fluid(24px, 17px);
+		transition: all $transitionBase;
+
+		&:hover {
+			color: #3C3C4399;
+		}
+	}
+
+	&__item-btn {
+		flex: 0 0 auto;
+		width: fluid(40px, 24px); height: fluid(40px, 24px);
+		background: url("../img/icons/arrow-down.svg") no-repeat center / contain;
+		transition: all $transitionBase;
+	}
+
+	&__item-content {
+		overflow: hidden;
+
+		p {
+			max-width: 840px;
+			font-size: fluid(16px, 14px);
+			line-height: 150%;
+		}
+	}
+
+}

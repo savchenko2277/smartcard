@@ -1,0 +1,72 @@
+@use 'lib' as *;
+
+.map {
+	$self: &;
+
+	&__container {
+		@include media(">md") {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+		}
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+
+		@include media(">md") {
+			padding: 56px;
+			border-radius: 56px;
+			background: #fff;
+		}
+
+		@include media("<=xxxlg") {
+			padding: 44px;
+		}
+
+		@include media("<=md") {
+			padding: 0;
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__title {
+		margin-bottom: fluid(40px, 16px);
+	}
+
+	&__desc {
+		font-size: fluid(24px, 17px);
+		color: #3C3C4399;
+		max-width: 600px;
+		line-height: 150%;
+		margin-bottom: 36px;
+	}
+
+	&__help {
+		margin-top: auto;
+
+		@include media("<=md") {
+			display: none;
+		}
+	}
+
+	&__frame {
+		position: relative;
+		height: 700px;
+		border-radius: fluid(56px, 32px);
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=xxxlg") {
+			height: 500px;
+		}
+	}
+
+}

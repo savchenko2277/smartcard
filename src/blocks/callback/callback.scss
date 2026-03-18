@@ -1,0 +1,156 @@
+@use 'lib' as *;
+
+.callback {
+	$self: &;
+
+	position: relative;
+
+	@include media("<=xs") {
+		border-radius: 32px;
+		overflow: clip;
+		background: $pinkColor;
+		padding: 24px 0 16px 0;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+
+		@include media("<=xs") {
+			gap: 24px;
+		}
+	}
+
+	&__section {
+		padding: 56px;
+		border-radius: fluid(56px, 32px);
+
+		@include media("<=xxxlg") {
+			padding: 48px;
+		}
+
+		@include media("<=lg") {
+			padding: 32px;
+		}
+
+		@include media("<=xs") {
+			padding: 0;
+			border-radius: 0;
+		}
+	}
+
+	&__about {
+		color: #ffffff;
+		background: $pinkColor;
+		position: relative;
+		overflow: clip;
+
+		@include media("<=md") {
+			min-height: 460px;
+		}
+
+		@include media("<=xs") {
+			min-height: 0;
+			overflow: visible;
+			background: none;
+		}
+	}
+
+	&__title {
+		max-width: 420px;
+		margin-bottom: fluid(32px, 12px);
+	}
+
+	&__desc {
+		font-weight: 400;
+		font-size: fluid(24px, 16px);
+		max-width: 526px;
+		line-height: 150%;
+	}
+
+	&__image {
+		position: absolute;
+		top: 40%;
+		right: -18%;
+		object-fit: contain;
+		z-index: 1;
+		width: 70%;
+
+		@include media("<=xs") {
+			width: 50%;
+			top: 5%;
+			right: -15%;
+		}
+	}
+
+	&__wrapper {
+		background: #FFFFFF;
+
+		@include media("<=xs") {
+			padding: 24px 16px;
+			border-radius: 24px;
+		}
+	}
+
+	&__form {
+		width: 100%;
+	}
+
+	&__form-labels {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-bottom: fluid(65px, 20px);
+
+		@include media("<=xxxlg") {
+			gap: 20px;
+		}
+	}
+
+	&__label {
+		width: 100%;
+	}
+
+	&__label-top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 4px;
+		margin-bottom: 12px;
+		position: relative;
+	}
+
+	&__label-title {
+		font-size: fluid(16px, 15px);
+		font-weight: 500;
+
+		span {
+			color: #3C3C4399;
+		}
+	}
+
+	&__input {
+		width: 100%;
+	}
+
+	&__agree {
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		gap: 16px;
+		line-height: 150%;
+		font-size: fluid(16px, 14px);
+		cursor: pointer;
+	}
+
+	&__btn {
+		width: 100%;
+	}
+
+}

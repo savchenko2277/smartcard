@@ -5,6 +5,7 @@
 
 	background: #ffffff;
 	border-radius: fluid(56px, 28px);
+	position: relative;
 
 	&_alt {
 		#{$self}__value {
@@ -20,6 +21,18 @@
 				height: fluid(40px, 28px);
 			}
 		}
+	}
+
+	&__badge {
+		position: absolute;
+		top: 0; left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: fluid(16px, 14px);
+		font-weight: 500;
+		color: #ffffff;
+		background: $pinkColor;
+		padding: fluid(10px, 8px) 16px;
+		border-radius: 24px;
 	}
 
 	&__top {

@@ -1,0 +1,85 @@
+@use 'lib' as *;
+
+.clue {
+	$self: &;
+	position: relative;
+	width: 20px;
+	height: 20px;
+
+	&.active {
+		#{$self}__content {
+			opacity: 1;
+			visibility: visible;
+		}
+		#{$self}__button {
+			&::after {
+				@include media("<=xs") {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	@include media("<=xs") {
+		position: static;
+	}
+
+	&__button {
+		width: 20px;
+		height: 20px;
+		background: url('../img/icons/question.svg') no-repeat center / contain;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 32px;
+			height: 20px;
+			background: url('../img/icons/treug.svg') no-repeat center / contain;
+			position: absolute;
+			top: 12px;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		background: #3C3C43;
+		color: #FFFFFF;
+		padding: 12px;
+		border-radius: 12px;
+		left: -50%;
+		transform: translateX(-43.8%);
+		top: 36px;
+		width: 351px;
+		line-height: 150%;
+		opacity: 0;
+		visibility: hidden;
+
+		&::after {
+			content: '';
+			width: 32px;
+			height: 20px;
+			background: url('../img/icons/treug.svg') no-repeat center / contain;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%) translateY(12px);
+
+			@include media("<=xs") {
+				display: none;
+			}
+		}
+
+		@include media("<=xs") {
+			top: 100%;
+			left: 0;
+			transform: none;
+			width: 100%;
+		}
+	}
+
+}

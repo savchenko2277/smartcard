@@ -1,0 +1,7 @@
+@use 'lib' as *;
+
+.section-margin {
+	$self: &;
+
+	margin: fluid(80px, 36px) 0;
+}

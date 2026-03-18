@@ -1,0 +1,76 @@
+@use 'lib' as *;
+
+.appeal {
+	$self: &;
+
+	color: #ffffff;
+	overflow-x: hidden;
+	padding-top: 196px;
+	margin-top: 20px;
+	margin-bottom: fluid(80px, 36px);
+
+	@include media("<=xxxlg") {
+		padding-top: 160px;
+	}
+
+	@include media("<=md") {
+		padding-top: 0;
+		margin-top: fluid(80px, 36px);
+	}
+
+	&__container.container {
+		background: $pinkColor;
+		border-radius: fluid(56px, 32px);
+		padding: 63px 80px 80px 80px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@include media("<=md") {
+			width: 100%;
+			padding: fluid(48px, 20px) fluid(48px, 16px) fluid(48px, 16px) fluid(48px, 16px);
+		}
+	}
+
+	&__title {
+		margin-bottom: 156px;
+		max-width: 60%;
+		position: relative;
+		z-index: 1;
+
+		@include media("<=xxxlg") {
+			margin-bottom: 100px;
+		}
+
+		@include media("<=md") {
+			margin-bottom: 334px;
+			max-width: 100%;
+		}
+	}
+
+	&__btn {
+		max-width: 441px;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__bg {
+		position: absolute;
+		right: -12%;
+		bottom: 0;
+		height: 140%;
+		object-fit: contain;
+		max-width: none;
+
+		@include media("<=xxxlg") {
+			height: 140%;
+		}
+
+		@include media("<=md") {
+			height: 75%;
+			transform: translateX(37%);
+			right: 0;
+		}
+	}
+
+}

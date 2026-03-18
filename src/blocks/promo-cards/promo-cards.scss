@@ -109,6 +109,26 @@
 		}
 	}
 
+	&__btn-mobile.btn {
+		@include media(">md") {
+			display: none;
+		}
+
+		position: fixed;
+		bottom: 16px;
+		z-index: 2;
+		width: calc(100% - (var(--container-padding) * 2));
+		max-width: 460px;
+
+		&.is-hidden {
+			opacity: 0;
+			visibility: hidden;
+			scale: 0;
+			transform-origin: bottom center;
+			transform: translateY(100%);
+		}
+	}
+
 	&__btn.btn {
 		width: 100%;
 		max-width: 386px;
@@ -120,7 +140,7 @@
 	}
 
 	&__advantages {
-		margin-top: 168px;
+		margin-top: 100px;
 		grid-column: auto / span 2;
 		position: relative;
 		z-index: 1;
