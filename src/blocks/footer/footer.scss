@@ -3,6 +3,8 @@
 .footer {
 	$self: &;
 
+	flex: 0 0 auto;
+	margin-top: fluid(80px, 36px);
 	border-radius: fluid(80px, 32px) fluid(80px, 32px) 0 0;
 	background: $darkTealColor;
 	padding: fluid(80px, 28px) 0 fluid(60px, 28px) 0;

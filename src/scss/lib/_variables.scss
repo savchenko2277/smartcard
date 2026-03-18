@@ -14,11 +14,7 @@ $matches: (
 :root {
 	--container-padding: 120px;
 
-	@media (max-width: 1680px) {
-		--container-padding: 80px;
-	}
-
-	@media (max-width: 1440px) {
+	@media (max-width: 1100px) {
 		--container-padding: 40px;
 	}
 

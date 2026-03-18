@@ -187,10 +187,6 @@
 		gap: 2px;
 		align-items: end;
 
-		@include media("<=xxlg") {
-			display: none;
-		}
-
 		@include media("<=lg") {
 			display: flex;
 			align-items: start;

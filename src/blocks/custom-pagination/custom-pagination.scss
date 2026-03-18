@@ -16,7 +16,7 @@
 		width: 12px;
 		transition: all $transitionBase;
 		border-radius: 8px;
-		margin: 0;
+		margin: 0 !important;
 		cursor: pointer;
 
 		&.swiper-pagination-bullet-active {

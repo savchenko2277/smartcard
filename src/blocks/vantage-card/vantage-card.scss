@@ -1,0 +1,99 @@
+@use 'lib' as *;
+
+.vantage-card {
+	$self: &;
+
+	border-radius: 56px;
+	background: #ffffff;
+	padding: 40px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	@include media("<=lg") {
+		padding: 24px;
+		gap: 16px;
+	}
+
+	@include media("<=sm") {
+		flex-direction: column;
+		border-radius: 20px;
+		padding: 0;
+	}
+
+	&_reverse {
+		@include media(">sm") {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			gap: 160px;
+
+			#{$self}__about {
+				margin-right: auto;
+			}
+
+			@include media("<=lg") {
+				justify-content: start;
+				gap: 40px;
+			}
+		}
+	}
+
+	&__about {
+		padding: 60px;
+
+		@include media("<=lg") {
+			padding: 0px;
+		}
+
+		@include media("<=sm") {
+			width: 100%;
+			padding: 24px 16px 0 16px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		font-size: 36px;
+		font-weight: 500;
+
+		@include media("<=lg") {
+			font-size: fluid(36px, 16px);
+		}
+	}
+
+	&__text {
+		line-height: 150%;
+		max-width: 486px;
+
+		@include media("<=lg") {
+			font-size: fluid(16px, 14px);
+		}
+	}
+
+	&__image {
+		width: 100%;
+		max-width: 642px;
+		height: 320px;
+		border-radius: 40px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=lg") {
+			height: 274px;
+			max-width: 460px;
+		}
+
+		@include media("<=sm") {
+			max-width: 100%;
+			border-radius: 20px;
+		}
+	}
+
+}
