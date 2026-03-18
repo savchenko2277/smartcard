@@ -9,10 +9,6 @@
 	margin-top: 20px;
 	margin-bottom: fluid(80px, 36px);
 
-	@include media("<=xxxlg") {
-		padding-top: 160px;
-	}
-
 	@include media("<=md") {
 		padding-top: 0;
 		margin-top: fluid(80px, 36px);
@@ -38,9 +34,6 @@
 		position: relative;
 		z-index: 1;
 
-		@include media("<=xxxlg") {
-			margin-bottom: 100px;
-		}
 
 		@include media("<=md") {
 			margin-bottom: 334px;
@@ -61,10 +54,6 @@
 		height: 140%;
 		object-fit: contain;
 		max-width: none;
-
-		@include media("<=xxxlg") {
-			height: 140%;
-		}
 
 		@include media("<=md") {
 			height: 75%;

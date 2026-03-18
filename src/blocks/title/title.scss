@@ -5,8 +5,4 @@
 
 	font-size: fluid(54px, 26px);
 	font-weight: 600;
-
-	@include media("<=xxxlg") {
-		font-size: fluid(42px, 26px);
-	}
 }

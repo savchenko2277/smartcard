@@ -64,10 +64,6 @@
 		font-size: fluid(74px, 26px);
 		font-weight: 600;
 		color: #ffffff;
-
-		@include media("<=xxxlg") {
-			font-size: fluid(48px, 26px);
-		}
 	}
 
 	&__contacts {
@@ -107,10 +103,6 @@
 
 		&:hover {
 			color: $pinkColor;
-		}
-
-		@include media("<=xxxlg") {
-			font-size: fluid(18px, 16px);
 		}
 
 		@include media("<=xs") {

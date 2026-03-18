@@ -21,10 +21,6 @@
 			background: #fff;
 		}
 
-		@include media("<=xxxlg") {
-			padding: 44px;
-		}
-
 		@include media("<=md") {
 			padding: 0;
 			align-items: center;
@@ -64,9 +60,6 @@
 			object-fit: cover;
 		}
 
-		@include media("<=xxxlg") {
-			height: 500px;
-		}
 	}
 
 }

@@ -15,10 +15,6 @@
 		#{$self}__icon {
 			right: auto;
 			left: -51px;
-
-			@include media("<=xxxlg") {
-				left: -24px;
-			}
 		}
 
 		#{$self}__title {
@@ -41,16 +37,6 @@
 			width: 40px;
 			height: 40px;
 			fill: #ffffff;
-		}
-
-		@include media("<=xxxlg") {
-			img {
-				width: 24px;
-				height: 24px;
-			}
-
-			right: -24px;
-			padding: 16px;
 		}
 
 		@include media("<=lg") {
@@ -79,10 +65,6 @@
 		display: block;
 		padding-right: 32px;
 
-		@include media("<=xxxlg") {
-			font-size: 18px;
-		}
-
 		@include media("<=lg") {
 			padding-right: 0;
 		}
@@ -92,10 +74,6 @@
 		font-size: fluid(16px, 14px);
 		color: rgba($color: #ffffff, $alpha: 0.6);
 		line-height: 150%;
-
-		@include media("<=xxxlg") {
-			font-size: 14px;
-		}
 	}
 
 }

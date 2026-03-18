@@ -9,10 +9,6 @@
 	padding-bottom: fluid(224px, 76px);
 	overflow: clip;
 
-	@include media("<=xxxlg") {
-		padding-top: fluid(120px, 95px);
-	}
-
 	&__icon-mobile {
 		display: block;
 		width: 272px;
@@ -55,15 +51,11 @@
 
 	&__title {
 		font-weight: 700;
-		font-size: fluid(82px, 34px);
+		font-size: fluid(64px, 34px);
 		max-width: 860px;
 		position: relative;
 		z-index: 1;
 		line-height: 130%;
-
-		@include media("<=xxxlg") {
-			font-size: fluid(48px, 34px);
-		}
 
 		@include media("<=md") {
 			margin-bottom: 44px;
@@ -76,10 +68,6 @@
 		display: flex;
 		flex-direction: column;
 
-		@include media("<=xxxlg") {
-			max-width: 460px;
-		}
-
 		@include media("<=md") {
 			align-items: center;
 			text-align: center;
@@ -89,12 +77,8 @@
 
 	&__sub-title {
 		font-weight: 700;
-		font-size: fluid(48px, 24px);
+		font-size: fluid(32px, 24px);
 		margin-bottom: fluid(24px, 12px);
-
-		@include media("<=xxxlg") {
-			font-size: fluid(32px, 24px);
-		}
 	}
 
 	&__desc {
@@ -102,11 +86,6 @@
 		line-height: 150%;
 		max-width: 377px;
 		margin-bottom: fluid(44px, 24px);
-
-		@include media("<=xxxlg") {
-			font-size: 14px;
-			margin-bottom: 24px;
-		}
 	}
 
 	&__btn-mobile.btn {
@@ -132,11 +111,6 @@
 	&__btn.btn {
 		width: 100%;
 		max-width: 386px;
-
-		@include media("<=xxxlg") {
-			padding: 14.5px;
-			max-width: 320px;
-		}
 	}
 
 	&__advantages {
@@ -144,10 +118,6 @@
 		grid-column: auto / span 2;
 		position: relative;
 		z-index: 1;
-
-		@include media("<=xxxlg") {
-			margin-top: 90px;
-		}
 
 		@include media("<=md") {
 			grid-column: auto;
@@ -179,15 +149,6 @@
 			z-index: -1;
 		}
 
-		@include media("<=xxxlg") {
-			width: 40%;
-
-			&::before {
-				width: 150%; height: 150%;
-				filter: blur(300px);
-			}
-		}
-
 		@include media("<=md") {
 			display: none;
 		}
@@ -197,14 +158,9 @@
 		display: grid;
 		grid-template-columns: repeat(2, minmax(auto, 436px));
 		justify-content: space-between;
-		gap: fluid(154px, 64px);
+		gap: fluid(128px, 64px);
 		position: relative;
 		z-index: 1;
-
-		@include media("<=xxxlg") {
-			gap: 64px;
-			grid-template-columns: repeat(2, minmax(auto, 360px));
-		}
 
 		@include media("<=md") {
 			grid-template-columns: 100%;

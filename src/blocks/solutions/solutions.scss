@@ -29,10 +29,6 @@
 		justify-self: end;
 		line-height: 150%;
 
-		@include media("<=xxxlg") {
-			font-size: 17px;
-		}
-
 		@include media("<=md") {
 			justify-self: center;
 		}
@@ -47,7 +43,7 @@
 				grid-template-columns: repeat(3, 1fr);
 				gap: fluid(40px, 8px);
 
-				@include media("<=xlg") {
+				@include media("<=lg") {
 					grid-template-columns: repeat(2, 1fr);
 				}
 			}

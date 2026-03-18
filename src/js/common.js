@@ -19,6 +19,20 @@ const setScrollbarWidth = () => {
 	document.documentElement.style.setProperty('--sw', `${window.innerWidth - document.documentElement.clientWidth}px`);
 }
 
+const setZoom = () => {
+	const baseWidth = 1920;
+	const scale = window.innerWidth / baseWidth;
+
+	if (window.matchMedia("(min-width: 1100px)").matches) {
+		document.documentElement.style.zoom = Math.min(scale, 1);
+	} else {
+		document.documentElement.style.zoom = 1; // сброс!
+	}
+};
+
+setZoom();
+window.addEventListener('resize', throttle(setZoom, 200));
+
 // Запуск функций
 // updateVH();
 setScrollbarWidth();

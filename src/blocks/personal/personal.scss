@@ -30,9 +30,6 @@
 		margin-bottom: fluid(110px, 28px);
 		line-height: 100%;
 
-		@include media("<=xxxlg") {
-			font-size: fluid(64px, 26px);
-		}
 
 		@include media("<=md") {
 			display: block;
@@ -140,10 +137,6 @@
 		transform: translateX(-55%) translateY(5%);
 		height: 105%;
 		object-fit: contain;
-
-		@include media("<=xxxlg") {
-			height: 100%;
-		}
 
 		@include media("<=md") {
 			height: 599px;

@@ -10,28 +10,16 @@
 	display: flex;
 	flex-direction: column;
 
-	@include media("<=xxxlg") {
-		padding: fluid(42px, 20px);
-	}
-
 	&__card-title {
 		margin-bottom: fluid(32px, 12px);
 		font-size: fluid(24px, 18px);
 		font-weight: 500;
-
-		@include media("<=xxxlg") {
-			margin-bottom: fluid(24px, 12px);
-		}
 	}
 
 	&__text {
 		color: rgba($color: #3C3C43, $alpha: 0.8);
 		line-height: 140%;
 		margin-bottom: fluid(30px, 10.5px);
-
-		@include media("<=xxxlg") {
-			margin-bottom: fluid(16px, 10.5px);
-		}
 	}
 
 	&__author {

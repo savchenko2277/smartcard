@@ -64,12 +64,15 @@
 
 	&__bg {
 		position: absolute;
-		bottom: -55px;
-		right: -187px;
+		bottom: 0;
+		right: 0;
 		width: 80%;
 		transition: scale $transitionBase;
+		transform: translate(28%, 15%);
 
 		&:has(img:nth-child(2)) {
+			transform: none;
+
 			@include media(">md") {
 				bottom: 0;
 				right: 0;
@@ -82,18 +85,23 @@
 					height: 100%;
 					object-fit: cover;
 
+
 					&:nth-child(1) {
 						display: none;
 					}
 				}
 			}
+
 			@include media("<=md") {
+				transform: translate(16%, 5%);
+
 				img {
 					&:nth-child(2) {
 						display: none;
 					}
 				}
 			}
+
 		}
 
 		img {
@@ -102,11 +110,8 @@
 			object-fit: contain;
 		}
 
-
-
-		@include media("<=xs") {
-			right: -30px;
-			bottom: -4px;
+		@include media("<=md") {
+			transform: translate(16%, 5%);
 		}
 	}
 
