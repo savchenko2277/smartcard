@@ -5,15 +5,27 @@ import { throttle } from "../../js/libs/utils.js";
 (() => {
 
     const accordeonsSection = document.querySelector(".accordeons");
-    if(!accordeonsSection) return;
+    if (!accordeonsSection) return;
 
     let swiper;
     const image = accordeonsSection.querySelector(".accordeons__image img");
 
+    const preloadImages = () => {
+        const imgs = accordeonsSection.querySelectorAll(".accordeons__item-image");
+
+        imgs.forEach(img => {
+            const src = img.getAttribute("src");
+            const preImg = new Image();
+            preImg.src = src;
+        });
+    };
+
+    preloadImages();
+
     const setSrcImage = (value) => {
         image.setAttribute("src", value);
         image.classList.add("is-animated");
-        
+
         setTimeout(() => {
             image.classList.remove("is-animated");
         }, 500);
@@ -21,7 +33,7 @@ import { throttle } from "../../js/libs/utils.js";
 
     const setAccordeons = () => {
         const items = accordeonsSection.querySelectorAll(".accordeons__item");
-        
+
         items.forEach((item) => {
             const head = item.querySelector(".accordeons__item-head");
             const src = item.querySelector(".accordeons__item-image").getAttribute("src");
