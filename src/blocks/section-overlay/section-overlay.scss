@@ -6,5 +6,6 @@
 	border-radius: fluid(80px, 32px) fluid(80px, 32px) 0 0;
 	margin-top: clamp(-84px, -6vw, -32px);
 	position: relative;
-	z-index: 1;
+	background: $bgColor;
+	z-index: 2;
 }

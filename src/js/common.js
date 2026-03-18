@@ -1,6 +1,9 @@
 import { throttle } from "./libs/utils";
 import "./polyfills.js";
 import "./blocks.js";
+import Inputmask from "inputmask";
+
+Inputmask({ "mask": "+7 (999) 999-99-99", placeholder: "0", showMaskOnHover: false }).mask(document.querySelectorAll('input[type="tel"]'));
 
 // Функции
 

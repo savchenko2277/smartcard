@@ -1,0 +1,18 @@
+<section class="hero @@if(this.class){@@class}">
+    <div class="hero__container">
+        <div class="hero__image">
+            <img src="./img/hero/@@img.webp" alt="">
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">
+                @@if(this.title){@@title}
+            </h1>
+            <p class="hero__desc">
+                @@if(this.desc){@@desc}
+            </p>
+            <a href="#" class="hero__btn btn btn-pink">
+                Заказать сим-карту
+            </a>
+        </div>
+    </div>
+</section>
