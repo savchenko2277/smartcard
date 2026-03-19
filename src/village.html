@@ -1,0 +1,43 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    @@include("_hero.html", {
+        title: "Wi-Fi в деревне как в городе",
+        img: "village",
+        desc: "Стабильный интернет там, где нет оптоволокна.  Соедините городской комфорт и сельский уют!"
+    })
+
+    @@include("_tariffs.html", {
+    class: "section-overlay"
+    })
+
+    @@include("_steps.html", {
+    class: "section-margin"
+    })
+
+    @@include("_accordeons.html", {
+    class: "section-padding"
+    })
+
+    @@include("_vantages.html", {
+    class: "section-margin"
+    })
+
+    @@include("_callback.html", {
+    class: "section-padding"
+    })
+
+    @@include("_services.html", {
+    class: "section-padding"
+    })
+
+    @@include("_answers.html", {
+    class: "section-padding"
+    })
+
+    @@include("_appeal.html")
+</main>
+
+@@include("_bottom.html")

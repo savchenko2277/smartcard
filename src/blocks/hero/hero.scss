@@ -11,6 +11,19 @@
 	color: #ffffff;
 	overflow: hidden;
 
+	&_title-more {
+		#{$self}__image {
+			right: -90px;
+
+			@include media("<=lg") {
+				right: 0;
+			}
+		}
+		#{$self}__content {
+			max-width: 1000px;
+		}
+	}
+
 	@include media("<=lg") {
 		padding-top: fluid(214px, 96px);
 		padding-bottom: fluid(240px, 90px);
@@ -69,7 +82,7 @@
 
 	&__content {
 		min-width: none;
-		max-width: 758px;
+		max-width: 890px;
 		display: flex;
 		flex-direction: column;
 
@@ -95,6 +108,7 @@
 		margin-bottom: 56px;
 		font-size: 24px;
 		line-height: 150%;
+		max-width: 679px;
 
 		@include media("<=lg") {
 			font-size: fluid(24px, 17px);

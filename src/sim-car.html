@@ -1,0 +1,43 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    @@include("_hero.html", {
+        title: "Сим-карта для автомобиля",
+        img: "koleso",
+        desc: "Выгодные тарифы для мультимедиа, телематики, русификации, поддержания ПО, удалённого доступа и систем безопасности."
+    })
+
+    @@include("_tariffs.html", {
+    class: "section-overlay"
+    })
+
+    @@include("_steps.html", {
+    class: "section-margin"
+    })
+
+    @@include("_accordeons.html", {
+    class: "section-padding"
+    })
+
+    @@include("_callback.html", {
+    class: "section-padding"
+    })
+
+    @@include("_vantages.html", {
+    class: "section-margin"
+    })
+
+    @@include("_services-other.html", {
+    class: "section-padding"
+    })
+
+    @@include("_answers.html", {
+    class: "section-padding"
+    })
+
+    @@include("_appeal.html")
+</main>
+
+@@include("_bottom.html")
