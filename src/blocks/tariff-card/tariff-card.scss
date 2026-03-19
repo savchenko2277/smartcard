@@ -16,6 +16,7 @@
 		}
 
 		#{$self}__icon {
+			flex: 0 0 auto;
 			img {
 				width: fluid(40px, 28px);
 				height: fluid(40px, 28px);
@@ -97,6 +98,7 @@
 		width: 24px;
 		height: 24px;
 		position: relative;
+		flex: 0 0 auto;
 
 		img {
 			width: 100%;

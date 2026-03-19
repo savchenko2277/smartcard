@@ -6,3 +6,5 @@ import "../blocks/promo-cards/promo-cards.js";
 import "../blocks/answers/answers.js";
 import "../blocks/accordeons/accordeons.js";
 import "../blocks/tariffs/tariffs.js";
+import "../blocks/tariffs-cards/tariffs-cards.js";
+import "../blocks/chooses/chooses.js";

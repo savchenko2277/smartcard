@@ -1,0 +1,36 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    @@include("_hero.html", {
+    title: "Тарифы мобильного интернета",
+    img: "unlim",
+    desc: "Выбирайте тарифы под любые задачи: <br> от экономных пакетов до полного безлимита. "
+    })
+
+    @@include("_tariffs-cards.html", {
+    class: "section-overlay"
+    })
+
+    @@include("_chooses.html", {
+    class: "section-padding"
+    })
+
+    @@include("_steps.html", {
+    class: "section-margin"
+    })
+
+    @@include("_vantages.html", {
+    class: "section-margin"
+    })
+
+    @@include("_appeal.html")
+
+    @@include("_answers.html", {
+    class: "section-padding"
+    })
+
+</main>
+
+@@include("_bottom.html")

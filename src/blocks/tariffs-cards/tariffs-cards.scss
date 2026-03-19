@@ -1,0 +1,65 @@
+@use 'lib' as *;
+
+.tariffs-cards {
+	$self: &;
+
+	overflow: hidden;
+	padding-top: fluid(80px, 28px);
+	padding-bottom: fluid(80px, 36px);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 24px;
+	}
+
+	&__desc {
+		margin-bottom: 72px;
+	}
+
+	&__tabs {
+		width: 100%;
+	}
+
+	&__navigation {
+		margin-bottom: 40px;
+
+		@include media("<=lg") {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__nav-btn {
+
+	}
+
+	&__tabs-items {}
+
+	&__tab.swiper {
+		display: none;
+		max-width: 100%;
+
+		@include media("<=lg") {
+			overflow: visible;
+		}
+
+		&.active {
+			display: block;
+			animation: fadeIn 0.5s ease-in-out;
+		}
+		.swiper-wrapper {
+			margin-bottom: 16px;
+			@include media(">lg") {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 40px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}

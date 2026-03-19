@@ -7,9 +7,13 @@
 	background: #ffffff;
 	border-radius: fluid(56px, 28px);
 	overflow: clip;
-	min-height: fluid(400px, 200px);
+	min-height: 400px;
 	position: relative;
 	display: flex;
+
+	@include media("<=xs") {
+		min-height: 300px;
+	}
 
 	&_desc {
 		min-height: fluid(400px, 275px);
@@ -21,6 +25,7 @@
 		position: relative;
 		z-index: 1;
 		flex: 1;
+		height: 100%;
 	}
 
 	&__title {
@@ -61,10 +66,16 @@
 		position: absolute;
 		bottom: -15px;
 		right: -15px;
-		width: fluid(80%, 60%);
+		height: 75%;
 
-		@include media("<=xs") {
-			bottom: 0; right: 0;
+		img {
+			height: 100%;
+			object-fit: contain;
+		}
+
+		@include media("<=lg") {
+			height: 70%;
+			bottom: 0;
 		}
 	}
 
