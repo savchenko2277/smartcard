@@ -1,0 +1,55 @@
+@use 'lib' as *;
+
+.internet-tariff {
+	$self: &;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 80px;
+		text-align: center;
+
+		@include media("<=lg") {
+			margin-bottom: fluid(80px, 40px);
+		}
+	}
+
+	&__cards {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 40px;
+
+		@include media("<=lg") {
+			grid-template-columns: repeat(2, 1fr);
+			gap: fluid(40px, 12px);
+		}
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__card.tariff-card {
+		@include media(">lg") {
+			border-radius: 32px;
+
+			.tariff-card__top {
+				padding: 28px;
+			}
+
+			.tariff-card__content {
+				padding: 28px 28px 40px 28px;
+			}
+
+			.tariff-card__bottom {
+				padding: 0 28px 28px 28px;
+			}
+		}
+	}
+
+}

@@ -29,7 +29,7 @@ const setZoom = () => {
 	if (window.matchMedia("(min-width: 1100px)").matches) {
 		document.documentElement.style.zoom = Math.min(scale, 1);
 	} else {
-		document.documentElement.style.zoom = 1; // сброс!
+		document.documentElement.style.zoom = 1;
 	}
 };
 

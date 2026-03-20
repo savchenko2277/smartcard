@@ -5,6 +5,9 @@ import { throttle } from "../../js/libs/utils.js";
 
 (() => {
 
+    const tariffsSection = document.querySelector(".tariffs-cards");
+    if (!tariffsSection) return;
+
     const tabs = driveTabs({
         container: '.tariffs-cards__tabs',
         controls: '.tariffs-cards__nav-btn',

@@ -40,6 +40,39 @@
 		}
 	}
 
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 20px;
+			color: #3C3C4399;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 20px;
+				flex: 0 0 auto;
+				height: 20px;
+				background: url("../img/icons/check.svg") no-repeat center / contain;
+			}
+
+			b {
+				font-weight: 700;
+				color: #3C3C43;
+			}
+
+			@include media("<=xs") {
+				gap: 8px;
+				align-items: start;
+			}
+		}
+	}
+
 	&__about {
 		padding: 60px;
 

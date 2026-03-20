@@ -11,6 +11,28 @@
 	color: #ffffff;
 	overflow: hidden;
 
+	&_partners {
+		#{$self}__title {
+			font-size: 76px;
+
+			@include media("<=lg") {
+				font-size: fluid(76px, 34px);
+			}
+		}
+
+		#{$self}__image {
+			width: 578px;
+
+			@include media("<=lg") {
+				width: 100%;
+			}
+		}
+
+		#{$self}__content {
+			max-width: 1020px;
+		}
+	}
+
 	&_title-more {
 		#{$self}__image {
 			right: -90px;
@@ -19,6 +41,7 @@
 				right: 0;
 			}
 		}
+
 		#{$self}__content {
 			max-width: 1000px;
 		}
@@ -53,7 +76,7 @@
 		&:after {
 			content: '';
 			position: absolute;
-			top: 50%; 
+			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			width: 650px;

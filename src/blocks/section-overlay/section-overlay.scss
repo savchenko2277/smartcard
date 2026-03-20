@@ -3,6 +3,14 @@
 .section-overlay {
 	$self: &;
 
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@include media("<=lg") {
+		padding-top: fluid(80px, 32px);
+		padding-bottom: fluid(80px, 36px);
+	}
+
 	border-radius: fluid(80px, 32px) fluid(80px, 32px) 0 0;
 	margin-top: clamp(-84px, -6vw, -32px);
 	position: relative;

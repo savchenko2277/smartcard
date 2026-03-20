@@ -1,0 +1,169 @@
+@use 'lib' as *;
+
+.how {
+	$self: &;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 80px;
+
+		@include media("<=lg") {
+			margin-bottom: fluid(80px, 32px);
+		}
+	}
+
+	&__cards {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+
+		@include media("<=lg") {
+			grid-template-columns: 100%;
+		}
+
+		@include media("<=xs") {
+			gap: 12px;
+		}
+	}
+
+	&__card {
+		background: #FFFFFF;
+		border-radius: 56px;
+		overflow: hidden;
+		min-height: 361px;
+		position: relative;
+
+		&:nth-child(3) {
+			#{$self}__card-image {
+				right: 65px;
+			}
+		}
+
+		@include media("<=xs") {
+			border-radius: 20px;
+			min-height: 0;
+		}
+	}
+
+	&__card-image {
+		position: absolute;
+		bottom: 0; right: 0;
+
+		img:nth-child(2) {
+			display: none;
+		}
+
+		@include media("<=lg") {
+			width: 30%;
+			object-position: bottom right;
+
+			img {
+				object-fit: contain;
+				width: 100%;
+			}
+		}
+
+		@include media("<=xs") {
+			position: static;
+			display: block;
+			width: 100%;
+
+			img {
+				&:nth-child(1) {
+					display: none;
+				}
+				&:nth-child(2) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__card-content {
+		padding: 56px;
+
+		@include media("<=xs") {
+			padding: 20px;
+		}
+	}
+
+	&__card-title {
+		font-size: 36px;
+		font-weight: 500;
+		margin-bottom: 16px;
+
+		b {
+			color: $pinkColor;
+			font-weight: 500;
+		}
+
+		@include media("<=xs") {
+			font-size: 18px;
+		}
+	}
+
+	&__card-desc {
+		max-width: 382px;
+
+		@include media("<=xs") {
+			font-size: 14px;
+		}
+	}
+
+	&__card-last {
+		position: relative;	
+		border-radius: 56px;
+		overflow: hidden;
+
+		@include flex-center;
+		color: #ffffff;
+		flex-direction: column;
+		gap: 16px;
+		text-align: center;
+		padding: 20px;
+
+		@include media("<=lg") {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			border-radius: 20px;
+		}
+	}
+
+	&__card-last-title {
+		position: relative;
+		z-index: 1;
+
+		font-size: 36px;
+		font-weight: 500;
+
+		@include media("<=xs") {
+			font-size: 18px;
+		}
+	}
+
+	&__card-last-text {
+		position: relative;
+		z-index: 1;
+		max-width: 434px;
+
+		@include media("<=xs") {
+			font-size: 14px;
+		}
+	}
+
+	&__card-last-bg {
+		position: absolute;
+		width: 100%; height: 100%;
+		object-fit: cover;
+		object-position: left bottom;
+		inset: 0;
+	}
+
+}

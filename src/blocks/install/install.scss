@@ -1,0 +1,164 @@
+@use 'lib' as *;
+
+.install {
+	$self: &;
+
+	@include media("<=xs") {
+		background: $pinkColor;
+		border-radius: 16px;
+		overflow: hidden;
+		padding: 16px 0;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 80px;
+		text-align: center;
+
+		@include media("<=lg") {
+			margin-bottom: fluid(80px, 24px);
+		}
+
+		@include media("<=xs") {
+			color: #ffffff;
+		}
+	}
+
+	&__columns {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+		width: 100%;
+
+		@include media("<=lg") {
+			grid-template-columns: 100%;
+			gap: 0;
+		}
+	}
+
+	&__column {
+		border-radius: 56px;
+		overflow: hidden;
+
+		@include media("<=xs") {
+			border-radius: 0;
+		}
+	}
+
+	&__about {
+		@include media(">xs") {
+			padding: 56px;
+			background: #FFFFFF;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 52px;
+		counter-reset: item;
+		list-style-type: none;
+
+		@include media("<=lg") {
+			gap: fluid(52px, 12px);
+		}
+	}
+
+	&__item {
+		counter-increment: item;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 32px;
+
+		@include media("<=xs") {
+			flex-direction: column;
+			background: #FFFFFF;
+			gap: 12px;
+			border-radius: 20px;
+			padding: 16px;
+			text-align: center;
+		}
+
+		&::before {
+			content: 'coded by @v1becod3r';
+			@include flex-center;
+			font-size: 36px;
+			font-weight: 500;
+			color: $pinkColor;
+			width: 80px;
+			height: 80px;
+			background: #E401631A;
+			border-radius: 28px;
+			flex: 0 0 auto;
+
+			@include media("<=xs") {
+				width: 40px; height: 40px;
+				border-radius: 12px;
+				background: $pinkColor;
+				color: #ffffff;
+				font-size: 18px;
+			}
+		}
+
+		&:nth-child(-n+9)::before {
+			content: '0' counter(item);
+		}
+
+		&:nth-child(n+10)::before {
+			content: counter(item);
+		}
+	}
+
+	&__item-about {}
+
+	&__item-title {
+		margin-bottom: 16px;
+		font-size: 36px;
+		font-weight: 500;
+
+		@include media("<=lg") {
+			font-size: fluid(36px, 18px);
+			margin-bottom: fluid(16px, 8px);
+		}
+	}
+
+	&__item-text {
+		line-height: 140%;
+		max-width: 440px;
+		
+		@include media("<=lg") {
+			font-size: fluid(16px, 14px);
+		}
+	}
+
+	&__image {
+		position: relative;
+
+		&:hover {
+			img {
+				transform: skew(5deg, 1deg) scale(1.1);
+				filter: blur(4px);
+			}
+		}
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all $transitionBase;
+		}
+
+		@include media("<=lg") {
+			display: none;
+		}
+	}
+
+}

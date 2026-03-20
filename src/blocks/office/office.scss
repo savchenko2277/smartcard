@@ -1,0 +1,102 @@
+@use 'lib' as *;
+
+.office {
+	$self: &;
+
+	padding: fluid(50px, 26px) 0;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 545px 1fr;
+		gap: 40px;
+
+		@include media("<=lg") {
+			grid-template-columns: 420px 1fr;
+			gap: 12px;
+		}
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__about {
+		background: #ffffff;
+		border-radius: 56px;
+		padding: 56px;
+		display: flex;
+		flex-direction: column;
+		gap: 58px;
+
+		@include media("<=lg") {
+			padding: fluid(56px, 28px);
+			border-radius: fluid(56px, 28px);
+			gap: fluid(58px, 24px);
+		}
+	}
+
+	&__item {
+
+	}
+
+	&__item-icon {
+		@include flex-center;
+
+		margin-bottom: 16px;
+		width: 46px; height: 46px;
+		border-radius: 13.8px;
+		background: #F2F2F7;
+
+		img {
+			object-fit: contain;
+			width: 20px; height: 20px;
+		}
+	}
+
+	&__item-title {
+		font-size: 32px;
+		font-weight: 600;
+		margin-bottom: 8px;
+
+		@include media("<=lg") {
+			font-size: fluid(32px, 18px);
+		}
+	}	
+
+	&__item-desc {
+		font-size: 24px;
+		line-height: 150%;
+
+		@include media("<=lg") {
+			font-size: fluid(24px, 16px);
+		}
+	}
+
+	&__map {
+		position: relative;
+		overflow: hidden;
+		border-radius: 56px;
+		height: 512px;
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=lg") {
+			border-radius: fluid(56px, 28px);
+		}
+	}
+
+}
