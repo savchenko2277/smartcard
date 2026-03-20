@@ -10,9 +10,18 @@
 
 	&__btn {
 
+		transition: all $transitionBase;
 		border-radius: 50%;
 		width: fluid(44px, 32px);
 		height: fluid(44px, 32px);
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:disabled {
+			opacity: 0.5;
+		}
 
 		&_prev {
 			background: url(../img/icons/icon-left.svg) no-repeat center / contain;

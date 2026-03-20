@@ -140,20 +140,12 @@
 	&__image {
 		position: relative;
 
-		&:hover {
-			img {
-				transform: skew(5deg, 1deg) scale(1.1);
-				filter: blur(4px);
-			}
-		}
-
 		img {
 			position: absolute;
 			inset: 0;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: all $transitionBase;
 		}
 
 		@include media("<=lg") {

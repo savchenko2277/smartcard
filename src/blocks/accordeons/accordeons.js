@@ -3,53 +3,51 @@ import { Pagination } from "swiper/modules";
 import { throttle } from "../../js/libs/utils.js";
 
 (() => {
-
     const accordeonsSection = document.querySelector(".accordeons");
     if (!accordeonsSection) return;
 
-    let swiper;
-    const image = accordeonsSection.querySelector(".accordeons__image img");
+    let swiper = null;
 
-    const preloadImages = () => {
-        const imgs = accordeonsSection.querySelectorAll(".accordeons__item-image");
+    const items = accordeonsSection.querySelectorAll(".accordeons__item");
+    const images = accordeonsSection.querySelectorAll(".accordeons__image img");
 
-        imgs.forEach(img => {
-            const src = img.getAttribute("src");
-            const preImg = new Image();
-            preImg.src = src;
+    if (!items.length || !images.length) return;
+
+    const setActiveImage = (index) => {
+        images.forEach((img, i) => {
+            img.classList.toggle("active", i === index);
+            img.classList.remove("is-animated");
         });
-    };
 
-    preloadImages();
+        const currentImage = images[index];
+        if (!currentImage) return;
 
-    const setSrcImage = (value) => {
-        image.setAttribute("src", value);
-        image.classList.add("is-animated");
+        currentImage.classList.add("is-animated");
 
         setTimeout(() => {
-            image.classList.remove("is-animated");
+            currentImage.classList.remove("is-animated");
         }, 500);
-    }
+    };
+
+    const setActiveItem = (index) => {
+        items.forEach((item, i) => {
+            item.classList.toggle("active", i === index);
+        });
+
+        setActiveImage(index);
+    };
 
     const setAccordeons = () => {
-        const items = accordeonsSection.querySelectorAll(".accordeons__item");
-
-        items.forEach((item) => {
+        items.forEach((item, index) => {
             const head = item.querySelector(".accordeons__item-head");
-            const src = item.querySelector(".accordeons__item-image").getAttribute("src");
+            if (!head) return;
 
             head.addEventListener("click", () => {
                 if (window.matchMedia("(max-width: 780px)").matches) return;
-
-                items.forEach((item) => {
-                    item.classList.remove("active");
-                });
-
-                item.classList.add("active");
-                setSrcImage(src);
+                setActiveItem(index);
             });
         });
-    }
+    };
 
     const setSwiper = () => {
         const isMobile = window.matchMedia("(max-width: 780px)").matches;
@@ -77,6 +75,9 @@ import { throttle } from "../../js/libs/utils.js";
     setSwiper();
     setAccordeons();
 
-    window.addEventListener("resize", throttle(setSwiper, 200));
+    const activeItem = accordeonsSection.querySelector(".accordeons__item.active");
+    const activeIndex = activeItem ? [...items].indexOf(activeItem) : 0;
+    setActiveImage(activeIndex);
 
+    window.addEventListener("resize", throttle(setSwiper, 200));
 })();

@@ -142,6 +142,7 @@
 		height: 140%;
 		object-fit: contain;
 		max-width: none;
+		pointer-events: none;
 
 		@include media("<=md") {
 			height: 75%;

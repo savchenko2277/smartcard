@@ -108,6 +108,8 @@
 		max-width: 890px;
 		display: flex;
 		flex-direction: column;
+		position: relative;
+		z-index: 1;
 
 		@include media("<=lg") {
 			align-items: center;
@@ -118,7 +120,7 @@
 	&__title {
 		font-size: 82px;
 		font-weight: 700;
-		line-height: 130%;
+		line-height: 110%;
 		margin-bottom: 32px;
 
 		@include media("<=lg") {

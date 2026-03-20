@@ -9,6 +9,7 @@ import { Pagination } from "swiper/modules";
         centeredSlides: true,
         spaceBetween: 8,
         initialSlide: 0,
+        loop: true,
         pagination: {
             el: ".custom-pagination",
             clickable: true,
