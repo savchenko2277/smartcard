@@ -1,0 +1,36 @@
+@use 'lib' as *;
+
+.radio {
+	$self: &;
+
+	appearance: none;
+
+	width: fluid(32px, 24px); height: fluid(32px, 24px);
+	border-radius: 50%;
+	background: #F2F2F7;
+	position: relative;
+	transition: all $transitionBase;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		aspect-ratio: 1 / 1;
+		width: fluid(13px, 10px); 
+		height: fluid(13px, 10px);
+		background: $bgColor;
+		border-radius: 50%;
+		background: #ffffff;
+		transition: all $transitionBase;
+		opacity: 0;
+	}
+
+	&:checked {
+		background: $pinkColor;
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}

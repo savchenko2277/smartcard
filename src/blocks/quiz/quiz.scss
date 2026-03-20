@@ -1,0 +1,158 @@
+@use 'lib' as *;
+
+.quiz {
+	$self: &;
+
+	padding: 44px;
+
+	@include media("<=xs") {
+		padding: 30px 16px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__pagination {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		margin-bottom: 36px;
+
+		span {
+			display: block;
+			max-width: 272px;
+			flex: 1 1 auto;
+			background: #F2F2F7;
+			border-radius: 4px;
+			height: 4px;
+			transition: all $transitionBase;
+			cursor: pointer;
+
+			&.active {
+				background: $pinkColor;
+			}
+		}
+
+		@include media("<=md") {
+			max-width: 85%;
+		}
+	}
+
+	&__checkboxes {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 36px;
+	}
+
+	&__checkbox {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 12px;
+		cursor: pointer;
+
+		font-weight: 500;
+	}
+
+	&__slides {
+
+		@include media("<=xs") {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		display: none;
+
+		&.active {
+			display: flex;
+			animation: fadeIn 0.5s ease-in-out;
+		}
+
+		@include media("<=xs") {
+			height: 100%;
+		}
+	}
+
+	&__title {
+		font-size: 44px;
+		font-weight: 700;
+		margin-bottom: 36px;
+
+		@include media("<=xs") {
+			font-size: 22px;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__slide-content {
+		width: 100%;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__cards {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 12px;
+		margin-bottom: 36px;
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__card {
+		padding: 16px;
+		background: #F2F2F7;
+		border-radius: 32px;
+		position: relative;
+		height: 179px;
+		overflow: hidden;
+		cursor: pointer;
+		transition: all $transitionBase;
+
+		&:has(> input:checked) {
+			background: #FFFFFF;
+			box-shadow: inset 0 0 0 2px $pinkColor;
+		}
+
+		@include media("<=xs") {
+			height: 165px;
+			border-radius: 20px;
+		}
+	}
+
+	&__card-title {
+		font-weight: 500;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__card-img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 110%;
+		object-fit: contain;
+		transform: translateX(20%) translateY(20%);
+	}
+
+	&__btn {
+		width: 100%;
+
+		@include media("<=xs") {
+			margin-top: auto;
+		}
+	}
+
+}

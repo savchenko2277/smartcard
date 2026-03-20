@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css?v=1774031525666">
-    <link rel="stylesheet" href="css/swiper.css?v=1774031525666">
+    <link rel="stylesheet" href="css/style.css?v=1774036590961">
+    <link rel="stylesheet" href="css/swiper.css?v=1774036590961">
     <title></title>
 </head>
 <body id="home">
@@ -797,7 +797,7 @@
         <h2 class="appeal__title title">
             Не&#160;знаете какой тариф выбрать? Свяжитесь с&#160;нами и&#160;мы&#160;подберём персональный тариф
         </h2>
-        <a href="#" class="appeal__btn btn btn-light">
+        <a href="#" data-modal="modal-callback" class="appeal__btn btn btn-light">
             Оставить заявку
         </a>
         <img src="./img/boy.webp" alt="" class="appeal__bg">
@@ -860,7 +860,167 @@
     </div>
 </footer>
 
-<script src="js/common.js?v=1774031525666"></script>
+<div class="modal modal-quiz">
+    <div class="modal__container">
+        <button class="modal__close"></button>
+        <div class="modal__content">
+            <div class="quiz">
+                <div class="quiz__pagination">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="quiz__slides">
+                    <div class="quiz__slide">
+                        <h2 class="quiz__title">Где планируете использовать интернет?</h2>
+                        <div class="quiz__slide-content">
+                            <div class="quiz__cards">
+                                <label class="quiz__card">
+                                    <h4 class="quiz__card-title">Автомобиль</h4>
+                                    <img src="./img/services/3.webp" alt="" class="quiz__card-img">
+                                    <input type="checkbox" style="display: none;">
+                                </label>
+                                <label class="quiz__card">
+                                    <h4 class="quiz__card-title">Автомобиль</h4>
+                                    <img src="./img/services/3.webp" alt="" class="quiz__card-img">
+                                    <input type="checkbox" style="display: none;">
+                                </label>
+                                <label class="quiz__card">
+                                    <h4 class="quiz__card-title">Автомобиль</h4>
+                                    <img src="./img/services/3.webp" alt="" class="quiz__card-img">
+                                    <input type="checkbox" style="display: none;">
+                                </label>
+                                <label class="quiz__card">
+                                    <h4 class="quiz__card-title">Автомобиль</h4>
+                                    <img src="./img/services/3.webp" alt="" class="quiz__card-img">
+                                    <input type="checkbox" style="display: none;">
+                                </label>
+                                <label class="quiz__card">
+                                    <h4 class="quiz__card-title">Автомобиль</h4>
+                                    <img src="./img/services/3.webp" alt="" class="quiz__card-img">
+                                    <input type="checkbox" style="display: none;">
+                                </label>
+                            </div>
+                            <button disabled class="quiz__btn btn btn-pink">
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+                    <div class="quiz__slide">
+                        <h2 class="quiz__title">Для&#160;чего планируете использовать?</h2>
+                        <div class="quiz__slide-content">
+                            <div class="quiz__checkboxes">
+                                <label class="quiz__checkbox">
+                                    <input class="checkbox" type="checkbox">
+                                    Соцсети, мессенджеры, почта
+                                </label>
+                                <label class="quiz__checkbox">
+                                    <input class="checkbox" type="checkbox">
+                                    Просмотр видео и&#160;фильмов
+                                </label>
+                                <label class="quiz__checkbox">
+                                    <input class="checkbox" type="checkbox">
+                                    Загрузка больших файлов, синхронизация данных
+                                </label>
+                                <label class="quiz__checkbox">
+                                    <input class="checkbox" type="checkbox">
+                                    Игры в&#160;режиме онлайн
+                                </label>
+                            </div>
+                            <button disabled class="quiz__btn btn btn-pink">
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+                    <div class="quiz__slide">
+                        <h2 class="quiz__title">Требуются&#160;ли дополнительные услуги?</h2>
+                        <div class="quiz__slide-content">
+                            <div class="quiz__checkboxes">
+                                <label class="quiz__checkbox">
+                                    <input class="radio" name="service" type="radio">
+                                    Соцсети, мессенджеры, почта
+                                </label>
+                                <label class="quiz__checkbox">
+                                    <input class="radio" name="service" type="radio">
+                                    Просмотр видео и&#160;фильмов
+                                </label>
+                                <label class="quiz__checkbox">
+                                    <input class="radio" name="service" type="radio">
+                                    Загрузка больших файлов, синхронизация данных
+                                </label>
+                                <label class="quiz__checkbox">
+                                    <input class="radio" name="service" type="radio">
+                                    Игры в&#160;режиме онлайн
+                                </label>
+                            </div>
+                            <button disabled class="quiz__btn btn btn-pink">
+                                Получить персональную подборку
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-callback">
+    <div class="modal__container">
+        <button class="modal__close"></button>
+        <div class="modal__content">
+            <div data-callback-modal-js class="callback-modal">
+                <div class="callback-modal__top">
+                    <h2 class="callback-modal__title title">
+                        Оставьте заявку
+                    </h2>
+                    <p class="callback-modal__desc">
+                        Как&#160;удобнее с&#160;вами связаться?
+                    </p>
+                </div>
+                <div class="callback-modal__navigation">
+                    <button class="callback-modal__nav-btn active">
+                        Telegram
+                    </button>
+                    <button class="callback-modal__nav-btn">
+                        Телефон
+                    </button>
+                    <button class="callback-modal__nav-btn">
+                        Email
+                    </button>
+                </div>
+                <form class="callback-modal__form">
+                    <label class="callback-modal__label">
+                        <h4 class="callback-modal__label-title">Ваше имя</h4>
+                        <input placeholder="Иван" type="text" class="input">
+                    </label>
+                    <div class="callback-modal__tabs">
+                        <div class="callback-modal__tab active">
+                            <label class="callback-modal__label">
+                                <h4 class="callback-modal__label-title">Ник&#160;в&#160;Telegram</h4>
+                                <input placeholder="@Ваш ник" type="text" class="input">
+                            </label>
+                        </div>
+                        <div class="callback-modal__tab">
+                            <label class="callback-modal__label">
+                                <h4 class="callback-modal__label-title">Ваш&#160;номер телефона</h4>
+                                <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                            </label>
+                        </div>
+                        <div class="callback-modal__tab">
+                            <label class="callback-modal__label">
+                                <h4 class="callback-modal__label-title">Ваш&#160;email</h4>
+                                <input placeholder="example@gmail.com" type="email" class="input">
+                            </label>
+                        </div>
+                    </div>
+                    <button disabled type="submit" class="callback-modal__btn btn btn-pink">Далее</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/common.js?v=1774036590961"></script>
 </body>
 
 </html>

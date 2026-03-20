@@ -9,6 +9,10 @@
 	transition: all $transitionBase;
 	font-size: fluid(16px, 15px);
 
+	&:disabled {
+		background: $pinkDisableColor;
+	}
+
 	&:hover {
 		cursor: pointer;
 	}
