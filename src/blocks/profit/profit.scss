@@ -3,6 +3,28 @@
 .profit {
 	$self: &;
 
+	&_about {
+		#{$self}__cards {
+			grid-template-columns: repeat(3, 1fr);
+
+			@include media("<=lg") {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include media("<=sm") {
+				grid-template-columns: 100%;
+			}
+		}
+
+		#{$self}__card-title {
+			font-size: 32px;
+
+			@include media("<=xs") {
+				font-size: 18px;
+			}
+		}
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;

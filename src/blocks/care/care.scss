@@ -1,0 +1,142 @@
+@use 'lib' as *;
+
+.care {
+	$self: &;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include media("<=xs") {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 8px;
+
+		&::after {
+			display: block;
+			content: url('../img/arrow-down-title.svg');
+			width: 1176px;
+			object-fit: contain;
+		}
+
+		@include media("<=lg") {
+			margin-bottom: 28px;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__cards {
+		width: 100%;
+		display: grid;
+		gap: 40px;
+		grid-template-columns: repeat(2, 1fr);
+
+		@include media("<=lg") {
+			grid-template-columns: 100%;
+			gap: 0;
+		}
+	}
+
+	&__card {
+		position: relative;
+		border-radius: 56px;
+		overflow: hidden;
+		min-height: 377px;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		padding: 56px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 80%;
+			height: 110%;
+			background: #FFFFFF;
+			filter: blur(80px);
+			transform: translateY(25%) translateX(-25%);
+		}
+
+		@include media("<=lg") {
+			border-radius: 24px;
+			min-height: auto;
+
+			&:nth-child(1) {
+				padding: 16px 16px 60px 16px;
+				background: #E401634D;
+				z-index: 1;
+			}
+
+			&:nth-child(2) {
+				padding: 60px 16px 16px 16px;
+				background: #4280F266;
+				z-index: 2;
+				margin-top: -40px;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__card-content {
+		@include media("<=lg") {
+			padding: 24px;
+			border-radius: 24px;
+			width: 100%;
+			background: #ffffff;
+		}
+	}
+
+	&__card-title {
+		position: relative;
+		z-index: 1;
+		font-size: 32px;
+		margin-bottom: 16px;
+		font-weight: 600;
+
+		@include media("<=lg") {
+			font-size: fluid(32px, 18px);
+			margin-bottom: 12px;
+		}
+	}
+
+	&__card-desc {
+		position: relative;
+		z-index: 1;
+		line-height: 160%;
+		max-width: 460px;
+
+		@include media("<=lg") {
+			font-size: fluid(16px, 14px);
+		}
+	}
+
+	&__card-image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@include media("<=lg") {
+			display: none;
+		}
+	}
+
+}

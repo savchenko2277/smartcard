@@ -1,0 +1,115 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+    <section class="hero-payment">
+        <div class="hero-payment__container container">
+            <div class="hero-payment__about">
+                <h1 class="hero-payment__title">
+                    Пополните баланс<br> и оставайтесь на связи.
+                </h1>
+                <p class="hero-payment__desc">
+                    Для действующих абонентов Смарт Кард
+                </p>
+            </div>
+            <div class="hero-payment__top-up">
+                <form class="hero-payment__form">
+                    <h2 class="hero-payment__form-title">Детали платежа</h2>
+                    <div class="hero-payment__labels">
+                        <label class="hero-payment__label">
+                            <h4 class="hero-payment__label-title">Номер телефона</h4>
+                            <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                        </label>
+                        <label class="hero-payment__label">
+                            <h4 class="hero-payment__label-title">Сумма пополнения</h4>
+                            <input placeholder="от 50 ₽  до 150 000 ₽ " type="tel" class="input">
+                        </label>
+                    </div>
+                    <p class="hero-payment__price">
+                        С учетом комиссии к оплате: <b>0 ₽</b>
+                    </p>
+                    <div class="hero-payment__variants">
+                        <img src="./img/variants/1.webp" alt="">
+                        <img src="./img/variants/2.webp" alt="">
+                        <img src="./img/variants/3.webp" alt="">
+                        <img src="./img/variants/4.webp" alt="">
+                        <img src="./img/variants/5.webp" alt="">
+                        <img src="./img/variants/6.webp" alt="">
+                    </div>
+                    <button class="hero-payment__btn btn-pink btn">
+                        Пополнить
+                    </button>
+                    <p class="hero-payment__form-about">
+                        После пополнения баланса интернет заработает в течение 15 минут*
+                    </p>
+                </form>
+            </div>
+        </div>
+        <img src="./img/nark-bg.webp" alt="" class="hero-payment__bg">
+    </section>
+    <section class="support section-overlay">
+        <div class="support__container container">
+            <div class="support__about">
+                <h2 class="support__title title">
+                    Возникли вопросы при оплате? Мы на связи 24/7
+                </h2>
+                <div class="support__contacts">
+                    <a href="#" class="support__contact">
+                        <img src="./img/icons/mail.svg" alt="">
+                        example@gmail.com
+                    </a>
+                    <a href="#" class="support__contact">
+                        <img src="./img/icons/telegram.svg" alt="">
+                        @Example
+                    </a>
+                </div>
+            </div>
+            <div class="support__image">
+                <img src="./img/support-image.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="appeal appeal_buttons appeal_friends section-padding">
+        <div class="appeal__container container">
+            <h2 class="appeal__title title">
+                Дарим 500 рублей за каждого друга
+            </h2>
+            <p class="appeal__desc">
+                Ваш личный контактный номер телефона — это промокод. Поделитесь им с другом и мы начислим 500 рублей на ваш счёт.
+            </p>
+            <div class="appeal__buttons">
+                <a href="#" class="appeal__btn btn btn-light">
+                    Оставить заявку
+                </a>
+            </div>
+            <img src="./img/friends.webp" alt="" class="appeal__bg">
+        </div>
+    </section>
+    <section class="mobile-app section-padding">
+        <div class="mobile-app__container container">
+            <div class="mobile-app__image">
+                <img src="./img/mobile-app.webp" alt="">
+            </div>
+            <div class="mobile-app__about">
+                <h2 class="mobile-app__title title">
+                    Оплачивайте интернет в один клик в мобильном приложении Смарт Кард
+                </h2>
+                <img src="./img/mobile-app.webp" alt="" class="mobile-app__image-mobile">
+                <p class="mobile-app__desc">
+                    Управляйте тарифом, следите за балансом и подключайте дополнительный услуги. Получайте важные уведомления и общайтесь с поддержкой в чате без ожиданий.
+                </p>
+                <ul class="mobile-app__list">
+                    <li class="mobile-app__list-item">Регистрация до 10 сим</li>
+                    <li class="mobile-app__list-item">Оплата через СБП и картой</li>
+                    <li class="mobile-app__list-item">Автоплатеж, чтобы не забыть о важном</li>
+                    <li class="mobile-app__list-item">Живой чат с техподдержкой 24/7</li>
+                </ul>
+                <a href="#" class="mobile-app__btn btn btn-pink">   
+                    Скачать приложение
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include("_bottom.html")

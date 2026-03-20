@@ -1,0 +1,58 @@
+@use 'lib' as *;
+
+.honest {
+	$self: &;
+
+	&__container {
+		position: relative;
+		border-radius: 56px;
+		overflow: hidden;
+		min-height: 787px;
+		text-align: center;
+		padding: 8px;
+
+		@include flex-center;
+		flex-direction: column;
+
+		@include media("<=xs") {
+			height: 720px;
+			border-radius: 32px
+		}
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 32px;
+		max-width: 1522px;
+		font-size: 82px;
+		font-weight: 700;
+		color: $pinkColor;
+
+		@include media("<=lg") {
+			font-size: fluid(82px, 34px);
+		}
+	}
+
+	&__desc {
+		position: relative;
+		z-index: 1;
+		max-width: 957px;
+		font-size: 24px;
+		font-weight: 500;
+		color: $pinkColor;
+
+		@include media("<=lg") {
+			font-size: fluid(24px, 16px);
+		}
+	}
+
+	&__image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+}

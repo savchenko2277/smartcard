@@ -1,0 +1,88 @@
+@use 'lib' as *;
+
+.size {
+	$self: &;
+
+	&__container {
+		display: grid;
+		grid-template-columns: minmax(auto, 661px) minmax(420px, 840px);
+		justify-content: space-between;
+
+		@include media("<=lg") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+
+		@include media("<=lg") {
+			align-items: center;
+			text-align: center;
+		}
+	}
+	
+	&__about-map {
+		height: 500px;
+		border-radius: 32px;
+		overflow: hidden;
+		position: relative;
+		display: none;
+		margin-bottom: 32px;
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=lg") {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__desc {
+		margin-bottom: 32px;
+	}
+
+	&__buttons {
+		margin-top: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+	}
+
+	&__btn {
+
+	}
+
+	&__map {
+		height: 512px;
+
+		border-radius: 56px;
+		overflow: hidden;
+		position: relative;
+
+		@include media("<=lg") {
+			display: none;
+		}
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+}

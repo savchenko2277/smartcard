@@ -1,0 +1,16 @@
+@use 'lib' as *;
+
+.simple-page {
+	$self: &;
+
+	padding-top: 214px;
+
+	&__title {
+		font-size: 82px;
+		font-weight: 700;
+
+		@include media("<=lg") {
+			font-size: fluid(82px, 34px);
+		}
+	}
+}
