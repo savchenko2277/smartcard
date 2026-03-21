@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css?v=1774042056670">
-    <link rel="stylesheet" href="css/swiper.css?v=1774042056670">
+    <link rel="stylesheet" href="css/style.css?v=1774113257571">
+    <link rel="stylesheet" href="css/swiper.css?v=1774113257571">
     <title></title>
 </head>
 <body id="home">
@@ -2110,6 +2110,39 @@
                             </button>
                         </div>
                     </div>
+                    <div class="quiz__slide">
+                        <h2 class="quiz__title">Заполните форму</h2>
+                        <div class="connect-modal connect-modal_quiz quiz__slide-content">
+                            <form class="connect-modal__form">
+                                <label class="connect-modal__label">
+                                    <h3 class="connect-modal__label-title">Ваше имя</h3>
+                                    <input placeholder="Иван" type="text" class="input">
+                                </label>
+                                <label class="connect-modal__label">
+                                    <h3 class="connect-modal__label-title">Ваш&#160;контактный номер телефона</h3>
+                                    <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                                </label>
+                                <label class="connect-modal__label">
+                                    <h3 class="connect-modal__label-title">Электронная почта</h3>
+                                    <input placeholder="example@gmail.com" type="text" class="input">
+                                </label>
+                                <label class="connect-modal__label">
+                                    <h3 class="connect-modal__label-title">Промокод <b>(контактный номер телефона
+                                            друга)</b></h3>
+                                    <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                                </label>
+                                <label class="connect-modal__agree">
+                                    <input type="checkbox" class="checkbox">
+                                    <p class="connect-modal__agree-text">
+                                        Я&#160;принимаю <a href="#">условия обработки персональных данных</a>
+                                    </p>
+                                </label>
+                            </form>
+                            <button disabled class="quiz__btn btn btn-pink">
+                                Получить персональную подборку
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2155,7 +2188,7 @@
                         <div class="callback-modal__tab">
                             <label class="callback-modal__label">
                                 <h4 class="callback-modal__label-title">Ваш&#160;номер телефона</h4>
-                                <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                                <input type="tel" class="input js-phone-mask" placeholder="+7 (000) 000-00-00" />
                             </label>
                         </div>
                         <div class="callback-modal__tab">
@@ -2172,7 +2205,44 @@
     </div>
 </div>
 
-<script src="js/common.js?v=1774042056670"></script>
+<div class="modal modal-connect">
+    <div class="modal__container">
+        <button class="modal__close"></button>
+        <div class="modal__content">
+            <div class="connect-modal">
+                <h2 class="connect-modal__title">Заявка на&#160;подключение</h2>
+                <p class="connect-modal__desc">40&#160;ГБ&#160;590&#160;₽ / мес</p>
+                <form class="connect-modal__form">
+                    <label class="connect-modal__label">
+                        <h3 class="connect-modal__label-title">Ваше имя</h3>
+                        <input placeholder="Иван" type="text" class="input">
+                    </label>
+                    <label class="connect-modal__label">
+                        <h3 class="connect-modal__label-title">Ваш&#160;контактный номер телефона</h3>
+                        <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                    </label>
+                    <label class="connect-modal__label">
+                        <h3 class="connect-modal__label-title">Электронная почта</h3>
+                        <input placeholder="example@gmail.com" type="text" class="input">
+                    </label>
+                    <label class="connect-modal__label">
+                        <h3 class="connect-modal__label-title">Промокод <b>(контактный номер телефона друга)</b></h3>
+                        <input placeholder="+7 (000) 000–00–00" type="tel" class="input">
+                    </label>
+                    <label class="connect-modal__agree">
+                        <input type="checkbox" class="checkbox">
+                        <p class="connect-modal__agree-text">
+                            Я&#160;принимаю <a href="#">условия обработки персональных данных</a>
+                        </p>
+                    </label>
+                    <button type="submit" class="connect-modal__btn btn btn-pink">Далее</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/common.js?v=1774113257571"></script>
 </body>
 
 </html>

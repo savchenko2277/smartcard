@@ -1,0 +1,13 @@
+@use 'lib' as *;
+
+.modal-connect {
+	$self: &;
+
+	.modal__container {
+		max-width: 555px;
+
+		@include media("<=md") {
+			max-width: 100%;
+		}
+	}
+}
