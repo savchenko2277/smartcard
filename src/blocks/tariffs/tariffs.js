@@ -1,15 +1,20 @@
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 (() => {
 
     const swiper = new Swiper(".tariffs__swiper.swiper", {
-        modules: [Pagination],
+        modules: [Pagination, Navigation],
         slidesPerView: 1.05,
         centeredSlides: true,
         spaceBetween: 8,
         initialSlide: 0,
         loop: true,
+        navigation: {
+            nextEl: document.querySelector('.tariffs__navigation-btn_next'),
+            prevEl: document.querySelector('.tariffs__navigation-btn_prev'),
+        },
         pagination: {
             el: ".custom-pagination",
             clickable: true,
@@ -22,7 +27,7 @@ import { Pagination } from "swiper/modules";
             },
             1100: {
                 slidesPerView: 3.1,
-                spaceBetween: 40,
+                spaceBetween: 24,
                 initialSlide: 2
             }
         }

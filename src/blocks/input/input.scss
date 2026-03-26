@@ -11,6 +11,10 @@
 	transition: all $transitionBase;
 	font-size: fluid(16px, 14px);
 
+	&:placeholder-shown {
+		color: #3C3C432E;
+	}
+
 	&.is-error {
 		box-shadow: inset 0 0 0 2px $red;
 	}
