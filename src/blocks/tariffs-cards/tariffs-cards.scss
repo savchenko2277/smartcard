@@ -43,9 +43,7 @@
 		display: none;
 		max-width: 100%;
 
-		@include media("<=lg") {
-			overflow: visible;
-		}
+		overflow: visible;
 
 		&.active {
 			display: block;

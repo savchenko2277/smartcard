@@ -58,7 +58,8 @@
 	}
 
 	&__image {
-		height: 840px;
+		min-height: 840px;
+		height: 100%;
 		position: relative;
 		overflow: hidden;
 
@@ -92,6 +93,7 @@
 		@include media(">sm") {
 			background: #ffffff;
 			width: 100%;
+			padding-bottom: 120px;
 
 			.swiper-wrapper {
 				display: flex;
