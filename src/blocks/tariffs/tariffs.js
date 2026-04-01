@@ -10,7 +10,7 @@ import { Navigation } from "swiper/modules";
         centeredSlides: true,
         spaceBetween: 8,
         initialSlide: 0,
-        loop: true,
+        loop: false,
         navigation: {
             nextEl: document.querySelector('.tariffs__navigation-btn_next'),
             prevEl: document.querySelector('.tariffs__navigation-btn_prev'),
