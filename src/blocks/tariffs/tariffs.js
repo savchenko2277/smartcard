@@ -23,12 +23,12 @@ import { Navigation } from "swiper/modules";
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                initialSlide: 2,
+                initialSlide: 0,
             },
             1100: {
                 slidesPerView: 3.1,
                 spaceBetween: 24,
-                initialSlide: 2
+                initialSlide: 0
             }
         }
     });
