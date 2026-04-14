@@ -29,6 +29,10 @@
 		max-width: 100%;
 		overflow: visible;
 
+		.cta-card {
+			height: auto;
+		}
+
 		.swiper-wrapper {
 			
 			margin-bottom: 16px;
@@ -43,7 +47,7 @@
 		}
 	}
 
-	&__card.swiper-slide {
+	.swiper-slide {
 		transition: all $transitionBase;
 
 		@include media(">lg") {

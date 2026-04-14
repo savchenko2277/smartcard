@@ -10,7 +10,7 @@ import { Navigation } from "swiper/modules";
         centeredSlides: true,
         spaceBetween: 8,
         initialSlide: 0,
-        loop: false,
+        loop: true,
         navigation: {
             nextEl: document.querySelector('.tariffs__navigation-btn_next'),
             prevEl: document.querySelector('.tariffs__navigation-btn_prev'),
@@ -28,7 +28,7 @@ import { Navigation } from "swiper/modules";
             1100: {
                 slidesPerView: 3.1,
                 spaceBetween: 24,
-                initialSlide: 0
+                initialSlide: 2
             }
         }
     });

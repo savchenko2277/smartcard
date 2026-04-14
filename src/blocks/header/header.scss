@@ -139,6 +139,9 @@
 
 	&__nav {
 		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__list {
@@ -146,8 +149,9 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: 16px;
+		gap: 44px;
 		max-width: 962px;
+		width: fit-content;
 
 		@include media("<=lg") {
 			flex-direction: column;

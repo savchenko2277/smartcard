@@ -8,6 +8,8 @@
         modals.forEach((modal) => {
             modal.classList.remove('active');
         });
+
+        document.body.classList.remove('no-scroll');
     };
 
     const openModal = (modalClass) => {
@@ -16,6 +18,7 @@
 
         closeAllModals();
         currentModal.classList.add('active');
+        document.body.classList.add('no-scroll');
     };
 
     openButtons.forEach((button) => {
@@ -29,17 +32,27 @@
 
     modals.forEach((modal) => {
         const closeButton = modal.querySelector('.modal__close');
+        const secondCloseButton = modal.querySelector('[data-close]');
         const content = modal.querySelector('.modal__content');
 
         if (closeButton) {
             closeButton.addEventListener('click', () => {
                 modal.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        }
+
+        if (secondCloseButton) {
+            secondCloseButton.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.classList.remove('no-scroll');
             });
         }
 
         modal.addEventListener('click', (e) => {
-            if (!content.contains(e.target)) {
+            if (e.target === modal) {
                 modal.classList.remove('active');
+                document.body.classList.remove('no-scroll');
             }
         });
     });

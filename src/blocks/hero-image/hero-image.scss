@@ -3,13 +3,13 @@
 .hero-image {
 	$self: &;
 
-	padding-top: 138px;
+	padding-top: 158px;
 	padding-bottom: 180px;
 	background: #221F28;
 	color: #ffffff;
 
 	@include media("<=lg") {
-		padding-top: fluid(138px, 68px);
+		padding-top: fluid(158px, 68px);
 		padding-bottom: fluid(180px, 104px);
 	}
 

@@ -1,0 +1,9 @@
+@use 'lib' as *;
+
+.modal-thanks {
+	$self: &;
+
+	.modal__container {
+		max-width: 806px;
+	}
+}
