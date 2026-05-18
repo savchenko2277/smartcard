@@ -1,0 +1,68 @@
+@use 'lib' as *;
+
+.section-list {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 44px;
+
+		@include media("<=lg") {
+			margin-bottom: fluid(44px, 32px);
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 36px 40px;
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+			gap: 24px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 12px;
+
+		@include media("<=sm") {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+
+	&__item-num {
+		font-weight: 600;
+		font-size: 32px;
+		color: $pinkColor;
+
+		@include media("<=sm") {
+			flex-direction: column;
+			font-size: 18px;
+		}
+	}
+
+	&__item-text {
+		line-height: 150%;
+		
+		b {
+			color: $pinkColor;
+		}
+
+		@include media("<=sm") {
+			font-size: 14px;
+			b {
+				color: inherit;
+				font-weight: inherit;
+			}
+		}
+	}
+
+}

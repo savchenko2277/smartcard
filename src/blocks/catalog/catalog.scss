@@ -1,0 +1,25 @@
+@use 'lib' as *;
+
+.catalog {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+
+		@include media("<=lg") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+			gap: 12px;
+		}
+	}
+
+}

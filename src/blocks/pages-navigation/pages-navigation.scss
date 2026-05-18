@@ -1,0 +1,68 @@
+@use 'lib' as *;
+
+.pages-navigation {
+	$self: &;
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+	}
+
+	&__btn {
+		display: block;
+		width: 16px;
+		height: 16px;
+		transition: all $transitionBase;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&_prev {
+			background: url('../img/icons/nal.svg') no-repeat center / contain;
+
+			&.active {
+				background: url('../img/icons/nala.svg') no-repeat center / contain;
+			}
+		}
+
+		&_next {
+			background: url('../img/icons/nar.svg') no-repeat center / contain;
+
+			&.active {
+				background: url('../img/icons/nara.svg') no-repeat center / contain;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+	}
+
+	&__list-item {
+		
+	}
+
+	&__link {
+		font-size: 17px;
+		font-weight: 700;
+		color: #3C3C434D;
+
+		&.active {
+			@include flex-center;
+
+			color: $pinkColor;
+			width: 32px;
+			height: 32px;
+			border-radius: 8px;
+			box-shadow: inset 0 0 0 1.5px $pinkColor;
+		}
+	}
+
+}

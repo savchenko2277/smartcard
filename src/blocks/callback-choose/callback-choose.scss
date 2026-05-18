@@ -1,0 +1,89 @@
+@use 'lib' as *;
+
+.callback-choose {
+	$self: &;
+	overflow: hidden;
+
+	@include media(">lg") {
+		padding-top: 256px;
+	}
+
+	&__container {
+		background: $pinkColor;
+		color: #ffffff;
+		
+		border-radius: 56px;
+		position: relative;
+
+		@include media(">lg") {
+			padding: 56px 88px;
+		}
+
+		@include media("<=lg") {
+			border-radius: fluid(56px, 32px);
+			overflow: hidden;
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 54px;
+
+		&.container {
+			@include media(">lg") {
+				width: 100%;
+			}
+		}
+	}
+
+	&__side {
+		grid-column: 2 / span 1;
+		position: relative;
+		z-index: 1;
+		
+		@include media(">lg") {
+			max-width: 660px;
+		}
+
+		@include media("<=lg") {
+			grid-column: auto / span 2;
+			padding: 20px 0;
+		}
+	}
+
+	&__title {
+		max-width: 590px;
+		margin-bottom: 20px;
+	}
+
+	&__desc {
+		line-height: 150%;
+		margin-bottom: 48px;
+		font-size: 24px;
+		max-width: 640px;
+
+		@include media("<=lg") {
+			margin-bottom: 278px;
+			font-size: fluid(24px, 17px);
+		}
+	}
+
+	&__btn {}
+
+	&__image {
+		position: absolute;
+		top: -136px;
+		left: -15%;
+
+		@include media("<=lg") {
+			top: auto;
+			left: auto;
+			bottom: -10%;
+			right: -27%;
+			height: 420px;
+			object-fit: cover;
+		}
+	}
+
+}

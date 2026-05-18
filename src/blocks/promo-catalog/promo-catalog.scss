@@ -1,0 +1,36 @@
+@use 'lib' as *;
+
+.promo-catalog {
+	$self: &;
+
+	background: #221F28;
+	color: #ffffff;
+	padding-top: 136px;
+	padding-bottom: 140px;
+
+	&_start {
+		#{$self}__container {
+			justify-content: start;
+		}
+	}
+
+	@include media("<=lg") {
+		padding-top: fluid(136px, 80px);
+		padding-bottom: fluid(140px, 52px);
+	}
+
+	&__container {
+		@include flex-center;
+	}
+
+	&__title {
+		font-size: 82px;
+		font-weight: 700;
+		text-align: center;
+
+		@include media("<=lg") {
+			font-size: fluid(82px, 34px);
+		}
+	}
+
+}

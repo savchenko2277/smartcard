@@ -1,0 +1,100 @@
+@use 'lib' as *;
+
+.promo-blog {
+	$self: &;
+
+	background: #221F28;
+	color: #ffffff;
+	padding-top: 140px;
+	padding-bottom: 140px;
+	position: relative;
+	overflow: hidden;
+
+	@include media("<=xs") {
+		padding-top: fluid(140px, 70px);
+		padding-bottom: fluid(140px, 96px);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -50%;
+		right: -10%;
+		width: 500px;
+		aspect-ratio: 1 / 1;
+		background: $pinkColor;
+		border-radius: 50%;
+		filter: blur(250px);
+
+		@include media("<=xs") {
+			width: 150px;
+			filter: blur(100px);
+			bottom: 0;
+			right: 0;
+			left: 50%;
+			top: 105px;
+			transform: translate(-50%);
+		}
+	}
+
+	&__container {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 64px;
+		position: relative;
+		z-index: 1;
+
+		@include media("<=xs") {
+			flex-direction: column;
+			text-align: center;
+			gap: 0;
+		}
+	}
+
+	&__info {
+
+	}
+
+	&__title {
+		margin-bottom: 28px;
+		font-size: 82px;
+		font-weight: 700;
+
+		@include media("<=lg") {
+			font-size: fluid(82px, 34px);
+		}
+	}
+
+	&__desc {
+		line-height: 120%;
+		font-weight: 500;
+		font-size: 24px;
+		max-width: 671px;
+
+		@include media("<=lg") {
+			font-size: fluid(24px, 17px);
+		}
+	}
+
+	&__image {
+		width: 306px;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+
+		@include media("<=lg") {
+			width: fluid(306px, 250px);
+		}
+
+		@include media("<=xs") {
+			order: -1;
+		}
+	}
+
+}

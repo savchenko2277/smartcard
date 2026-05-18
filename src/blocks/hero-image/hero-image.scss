@@ -13,6 +13,30 @@
 		padding-bottom: fluid(180px, 104px);
 	}
 
+	&_categories {
+		padding-bottom: fluid(140px, 96px);
+		#{$self}__container {
+			gap: 60px 120px;
+
+			@include media("<=lg") {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				align-items: center;
+				text-align: center;
+				justify-content: center;
+			}
+		}
+
+		#{$self}__title {
+			font-size: 54px;
+
+			@include media("<=lg") {
+				font-size: fluid(56px, 34px);
+			}
+		}
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: auto minmax(659px, 659px);
@@ -47,7 +71,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 40px;
-		
+
 
 		@include media("<=lg") {
 			align-items: center;

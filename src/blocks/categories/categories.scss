@@ -1,0 +1,23 @@
+@use 'lib' as *;
+
+.categories {
+	$self: &;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 20px;
+
+		@include media("<=xs") {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px 10px;
+		}
+	}
+
+}

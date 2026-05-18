@@ -5,4 +5,8 @@
 
 	width: min($containerWidth, calc(100% - var(--container-padding) * 2));
 	margin: 0 auto;
+
+	&_small {
+		width: min(1520px, calc(100% - var(--container-padding) * 2));
+	}
 }

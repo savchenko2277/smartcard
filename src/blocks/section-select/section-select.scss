@@ -1,0 +1,77 @@
+@use 'lib' as *;
+
+.section-select {
+	$self: &;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+			gap: 32px;
+		}
+	}
+
+	&__title {
+		font-size: 44px;
+
+		@include media("<=lg") {
+			font-size: fluid(44px, 26px);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 44px;
+		line-height: 150%;
+
+		@include media("<=sm") {
+			gap: 24px;
+		}
+	}
+
+	&__text {
+		@include media("<=xs") {
+			font-size: 14px;
+		}
+	}
+
+	&__list {
+		h4 {
+			font-weight: 700;
+			font-size: 17px;
+			margin-bottom: 16px;
+
+			@include media("<=xs") {
+				font-size: 16px;
+				margin-bottom: 8px;
+			}
+		}
+
+		li {
+			display: flex;
+			flex-direction: row;
+			align-items: start;
+			gap: 8px;
+
+			&::before {
+				content: '';
+				margin-top: 8px;
+				width: 6px;
+				height: 6px;
+				background: $textColor;
+				border-radius: 50%;
+				display: block;
+				flex: 0 0 auto;
+			}
+
+			@include media("<=xs") {
+				font-size: 14px;
+			}
+		}
+	}
+
+}
