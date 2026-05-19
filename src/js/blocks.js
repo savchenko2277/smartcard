@@ -13,3 +13,4 @@ import "../blocks/modal/modal.js";
 import "../blocks/quiz/quiz.js";
 import "../blocks/callback-modal/callback-modal.js";
 import "../blocks/hub/hub.js";
+import "../blocks/article/article.js";

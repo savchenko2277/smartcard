@@ -5,6 +5,12 @@
 
 	flex: 1 1 auto;
 
+	&_article {
+		@include media("<=xs") {
+			background: #ffffff;
+		}
+	}
+
 	&_ui {
 		padding-top: 120px;
 		display: flex;

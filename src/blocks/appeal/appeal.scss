@@ -10,6 +10,23 @@
 	margin-bottom: fluid(80px, 36px);
 	position: relative;
 
+	&_article {
+		width: 100%;
+
+		#{$self}__buttons {
+			max-width: 441px;
+		}
+
+		#{$self}__bg {
+			height: 120%;
+			@include media("<=md") {
+				height: 75%;
+				transform: translateX(37%);
+				right: 0;
+			}
+		}
+	}
+
 	&_friends {
 		#{$self}__desc {
 			max-width: 502px;
@@ -18,6 +35,7 @@
 				margin-bottom: 392px;
 			}
 		}
+
 		#{$self}__title {
 			margin-bottom: 28px;
 			font-size: 54px;
@@ -28,10 +46,11 @@
 				margin-bottom: 16px !important;
 			}
 		}
+
 		#{$self}__bg {
 			height: 120%;
 			right: -2%;
-			
+
 			@include media("<=lg") {
 				height: 70%;
 				right: 0%;
@@ -87,7 +106,7 @@
 		margin-top: fluid(80px, 36px);
 	}
 
-	&__container.container {
+	&__container {
 		background: $pinkColor;
 		border-radius: fluid(56px, 32px);
 		padding: 63px 80px 80px 80px;

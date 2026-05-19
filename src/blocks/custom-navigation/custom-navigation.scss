@@ -8,6 +8,24 @@
 	align-items: center;
 	gap: fluid(24px, 20px);
 
+	&_light {
+		gap: 16px;
+
+		#{$self}__btn {
+			background: #ffffff;
+			border-radius: 50px;
+			box-shadow: 0px 8px 16px 0px #00000026;
+
+			&_prev {
+				background: url(../img/a-l-l.svg) no-repeat center / contain;
+			}
+
+			&_next {
+				background: url(../img/a-l-r.svg) no-repeat center / contain;
+			}
+		}
+	}
+
 	&__btn {
 
 		transition: all $transitionBase;
