@@ -32,11 +32,16 @@ body, html {
 	display: flex;
 	flex-flow: column nowrap;
 	min-height: 100vh;
+	height: 100%;
 
 	&.no-scroll {
 		overflow: clip;
 		padding-right: var(--sw);
 	}
+}
+
+body {
+	min-height: 100%;
 }
 
 .sprite {

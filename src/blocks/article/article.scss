@@ -175,14 +175,18 @@
 	}
 
 	&__group {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        // Добавляем отступ для скролла, равный высоте шапки + небольшой запас
+        scroll-margin-top: 120px; 
 
-		@include media("<=xs") {
-			gap: 0;
-		}
-	}
+        @include media("<=xs") {
+            gap: 0;
+            // На мобилках можно сделать отступ чуть меньше, если шапка меняет высоту
+            scroll-margin-top: 120px; 
+        }
+    }
 
 	&__group-title {
 		font-size: 32px;

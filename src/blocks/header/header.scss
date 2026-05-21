@@ -172,6 +172,8 @@
 	&__list-item {
 		transition: all $transitionBase;
 		font-size: fluid(16px, 14px);
+		position: relative;
+		z-index: 2;
 
 		&:hover {
 			opacity: 0.6;
@@ -289,14 +291,17 @@
 	}
 
 	&__item-content-container.container {
-		position: fixed;
-		top: 96px;
-		left: 50%;
-		transform: translateX(-50%);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transform: none;
+		padding-top: 20px;
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		transition: all $transitionBase;
+		z-index: 0;
+		width: max-content;
+		transition: opacity $transitionBase, visibility $transitionBase;
 
 		@include media("<=lg") {
 			position: static;
@@ -307,13 +312,16 @@
 			width: 100%;
 			margin: 0;
 			overflow: hidden;
+			transition: all $transitionBase; // Возвращаем дефолт для мобилок
+			padding-top: 0;
 		}
 	}
 
 	&__item-content {
 		background: #FFFFFF;
-		display: grid;
-		grid-template-columns: repeat(4, auto);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		width: fit-content;
 		gap: 56px;
 		padding: 48px;
@@ -351,6 +359,9 @@
 	}
 
 	&__item-link {
+		position: relative;
+		z-index: 2;
+
 		@include media("<=lg") {
 			font-size: 18px;
 			font-weight: 500;
@@ -367,7 +378,7 @@
 					}
 				}
 
-				@include media("<=xs") {
+				@include media("<=lg") {
 					margin-bottom: 20px;
 				}
 			}
@@ -416,7 +427,7 @@
 				content: '';
 				position: absolute;
 				left: 50%;
-				top: 52px;
+				top: 45px;
 				width: 24px;
 				height: 20px;
 				transition: all $transitionBase;
@@ -457,8 +468,12 @@
 
 		&:hover {
 			@include media(">xs") {
-				opacity: 0.6;
+				color: $pinkColor;
 			}
+		}
+
+		@include media("<=xs") {
+			font-size: 14px;
 		}
 	}
 
