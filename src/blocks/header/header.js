@@ -96,11 +96,11 @@
                 link.addEventListener('click', (e) => {
                     if (checkIsDesktop()) {
                         if (item.classList.contains('active')) {
-                            e.preventDefault();
+                            
                             item.classList.remove('active');
                         }
                     } else {
-                        e.preventDefault();
+                        
                         headerLists.forEach((list) => {
                             if (list !== item) list.classList.remove('active');
                         });
